@@ -1,7 +1,7 @@
 @use './partials/global' as *;
 @use '../styles/partials/variables' as *;
 @use '../styles/partials/mixins' as *;
-@use './partials/typography-mixins' as *;
+@use '../styles/partials/typography-mixins' as *;
 
 .header {
   @include flex(column);
@@ -54,5 +54,34 @@
     border-bottom: 4px solid white;
     font-weight: 700;
     border-bottom: 4px solid white;
+  }
+}
+
+.hero {
+  position: relative;
+  @include flex(row, flex-start, center);
+  background-image: url('../assets/images/hero-bio.jpg');
+  background-color: $bandsite-black;
+  background-position: center;
+  background-size: cover;
+  height: 20rem;
+
+  &__overlay {
+    width: 100%;
+    height: 100%;
+    background-color: $bandsite-black;
+    opacity: 50%;
+  }
+
+  &__title {
+    @include mobi-page-header;
+    top: 50%;
+    left: 2rem;
+    position: absolute;
+    color: $white;
+
+    @include tablet {
+      @include desk-tab-page-header;
+    }
   }
 }
