@@ -6,8 +6,11 @@
 .header {
   @include flex(column);
 
+  @include tablet {
+    @include flex(row, center, center);
+    padding: 0 2rem;
+  }
   &__word-mark {
-    margin: 1rem 0 0.5rem 0;
     font-weight: 400;
   }
 }
@@ -19,6 +22,11 @@
     @include flex(row, center, center);
     list-style: none;
   }
+
+  @include tablet {
+    @include flex(row, flex-start, center);
+  }
+
   &__list-link {
     text-align: center;
     width: 100%;
@@ -26,6 +34,12 @@
     font-weight: 400;
     color: $silver;
 
+    @include tablet {
+      text-align: left;
+      width: max-content;
+      padding-bottom: 1.5rem;
+      margin-left: 4rem;
+    }
     &--selected {
       @extend .nav__list-link;
       color: $white;
