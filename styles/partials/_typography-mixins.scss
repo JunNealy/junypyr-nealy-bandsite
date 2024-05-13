@@ -1,0 +1,81 @@
+:root {
+  @font-face {
+    font-family: 'Avenir';
+    src: url('../../assets/Font/AvenirNextLTPro-Regular.otf') format('opentype'),
+      url('../../assets/Font/AvenirNextLTPro-Demi.otf') format('opentype'),
+      url('../../assets/Font/AvenirNextLTPro-Bold.otf') format('opentype');
+  }
+  font-family: Avenir;
+}
+
+@mixin desk-tab-page-header {
+  font-size: 3.75rem;
+  line-height: 4.25rem;
+  font-weight: 700;
+}
+
+@mixin mobi-page-header {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+}
+
+@mixin desk-tab-section-header {
+  font-size: 2.25rem;
+  line-height: 2.75rem;
+  font-weight: 700;
+}
+
+@mixin mobi-section-header {
+  font-size: 2.25rem;
+  line-height: 2.75rem;
+  font-weight: 700;
+}
+
+@mixin desk-tab-sub-header {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 600;
+}
+
+@mixin mobi-sub-header {
+  font-size: 8.75rem;
+  line-height: 1.375rem;
+  font-weight: 600;
+}
+
+@mixin desk-tab-body-copy {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-weight: 400;
+}
+
+@mixin mobi-body-copy {
+  font-size: 0.813rem;
+  line-height: 1.125rem;
+  font-weight: 400;
+}
+
+@mixin desk-tab-footer-copy {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 400;
+}
+
+@mixin mobi-footer-copy {
+  font-size: 0.813rem;
+  line-height: 1.125rem;
+  font-weight: 400;
+}
+
+@mixin desk-tab-labels-bottons {
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+}
+
+@mixin desk-tab-labels-bottons {
+  font-size: 0.625rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+}

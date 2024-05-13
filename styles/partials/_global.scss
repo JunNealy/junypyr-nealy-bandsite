@@ -1,0 +1,51 @@
+@use './_variables' as *;
+@use './_mixins' as *;
+
+/* ------------------------------- */
+/* Resets */
+/* ------------------------------- */
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+}
+
+p,
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+button {
+  border: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ------------------------------- */
+/* Header */
+/* ------------------------------- */
+
+.header {
+  width: 100%;
+  background-color: $bandsite-black;
+  color: $white;
+}

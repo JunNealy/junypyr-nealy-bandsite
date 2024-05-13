@@ -1,0 +1,44 @@
+@use './partials/global' as *;
+@use '../styles/partials/variables' as *;
+@use '../styles/partials/mixins' as *;
+@use './partials/typography-mixins' as *;
+
+.header {
+  @include flex(column);
+
+  &__word-mark {
+    margin: 1rem 0 0.5rem 0;
+    font-weight: 400;
+  }
+}
+
+.nav {
+  width: 100%;
+
+  &__list {
+    @include flex(row, center, center);
+    list-style: none;
+  }
+  &__list-link {
+    text-align: center;
+    width: 100%;
+    padding-bottom: 0.5rem;
+    font-weight: 400;
+    color: $silver;
+
+    &--selected {
+      @extend .nav__list-link;
+      color: $white;
+      border-bottom: 4px solid white;
+      font-weight: 700;
+    }
+  }
+
+  &__list-link:hover {
+    @extend .nav__list-link;
+    color: $white;
+    border-bottom: 4px solid white;
+    font-weight: 700;
+    border-bottom: 4px solid white;
+  }
+}
