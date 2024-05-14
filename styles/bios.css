@@ -100,6 +100,7 @@ a {
   width: 100%;
   text-align: center;
   line-height: 2rem;
+  color: #afafaf;
 }
 @media screen and (min-width: 768px) {
   .nav__list-link, .nav__list-link:hover, .nav__list-link--active:hover, .nav__list-link--active {
@@ -110,10 +111,12 @@ a {
   }
 }
 .nav__list-link--active {
-  border-bottom: 4px solid white;
+  color: #ffffff;
+  border-bottom: 4px solid #ffffff;
 }
 .nav__list-link:hover, .nav__list-link--active:hover {
-  border-bottom: 4px solid white;
+  color: #ffffff;
+  border-bottom: 4px solid #ffffff;
 }
 
 .hero {
@@ -126,7 +129,12 @@ a {
   background-color: #323232;
   background-position: center;
   background-size: cover;
-  height: 20rem;
+  height: 18rem;
+}
+@media screen and (min-width: 768px) {
+  .hero {
+    height: 36rem;
+  }
 }
 .hero__overlay {
   width: 100%;
