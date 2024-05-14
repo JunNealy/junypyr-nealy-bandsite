@@ -1,5 +1,5 @@
-@use './_variables' as *;
-@use './_mixins' as *;
+@use './variables' as *;
+@use './mixins' as *;
 
 /* ------------------------------- */
 /* Resets */
@@ -41,11 +41,68 @@ a {
 }
 
 /* ------------------------------- */
+/* Utility Classe */
+/* ------------------------------- */
+
+.container-wide {
+  width: 90%;
+}
+
+/* ------------------------------- */
 /* Header */
 /* ------------------------------- */
 
 .header {
-  width: 100%;
+  @include flex(column);
   background-color: $bandsite-black;
   color: $white;
+
+  @include tablet {
+    @include flex(row, center, center);
+  }
+  &__word-mark {
+    margin-top: 1rem;
+    font-weight: 400;
+
+    @include tablet {
+      margin: 0 2rem;
+    }
+  }
+}
+
+.nav {
+  width: 100%;
+
+  &__list {
+    @include flex(row, center, center);
+    list-style: none;
+
+    @include tablet {
+      @include flex(row, flex-start, center);
+    }
+
+    &-link {
+      width: 100%;
+      text-align: center;
+      line-height: 2rem;
+      color: $silver;
+
+      @include tablet {
+        line-height: 4rem;
+        width: max-content;
+        margin-left: 3rem;
+      }
+
+      &--active {
+        @extend .nav__list-link;
+        color: $white;
+        border-bottom: 4px solid $white;
+      }
+      &:hover {
+        @extend .nav__list-link;
+        color: $white;
+        border-bottom: 4px solid $white;
+      }
+    }
+  }
 }

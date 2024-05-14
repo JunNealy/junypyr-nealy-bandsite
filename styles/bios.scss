@@ -3,59 +3,6 @@
 @use '../styles/partials/mixins' as *;
 @use '../styles/partials/typography-mixins' as *;
 
-.header {
-  @include flex(column);
-
-  @include tablet {
-    @include flex(row, center, center);
-  }
-  &__word-mark {
-    margin-top: 1rem;
-    font-weight: 400;
-
-    @include tablet {
-      margin: 0 2rem;
-    }
-  }
-}
-
-.nav {
-  width: 100%;
-
-  &__list {
-    @include flex(row, center, center);
-    list-style: none;
-
-    @include tablet {
-      @include flex(row, flex-start, center);
-    }
-
-    &-link {
-      width: 100%;
-      text-align: center;
-      line-height: 2rem;
-      color: $silver;
-
-      @include tablet {
-        line-height: 4rem;
-        width: max-content;
-        margin-left: 3rem;
-      }
-
-      &--active {
-        @extend .nav__list-link;
-        color: $white;
-        border-bottom: 4px solid $white;
-      }
-      &:hover {
-        @extend .nav__list-link;
-        color: $white;
-        border-bottom: 4px solid $white;
-      }
-    }
-  }
-}
-
 .hero {
   position: relative;
   @include flex(row, flex-start, center);
@@ -63,7 +10,7 @@
   background-color: $bandsite-black;
   background-position: center;
   background-size: cover;
-  height: 18rem;
+  height: 12rem;
 
   @include tablet {
     height: 36rem;
@@ -82,9 +29,59 @@
     left: 2rem;
     position: absolute;
     color: $white;
+    transform: translateY(-50%);
 
     @include tablet {
       @include desk-tab-page-header;
     }
+  }
+}
+
+.about {
+  margin: 0 1rem;
+
+  &__title {
+    @include mobi-section-header;
+    @include mobi-headline-margin;
+  }
+
+  &__image {
+    @include mobi-component-margin;
+  }
+
+  &__quote {
+    font-size: 14.5px;
+    font-weight: 700;
+    padding-bottom: 1.25rem;
+
+    &-text {
+      margin-bottom: 0.25rem;
+    }
+  }
+
+  &__headline {
+    @include mobi-body-copy;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+
+  &__text-block {
+    @include mobi-body-copy;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.gallery {
+  margin: 0 1rem;
+  background-color: $alabaster;
+
+  &__title {
+    @include mobi-section-header;
+    @include mobi-headline-margin;
+  }
+
+  &__container {
+    @include flex(column, center, center);
+    gap: 1rem;
   }
 }

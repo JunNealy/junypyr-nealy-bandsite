@@ -38,27 +38,22 @@ a {
 }
 
 /* ------------------------------- */
+/* Utility Classe */
+/* ------------------------------- */
+.container-wide {
+  width: 90%;
+}
+
+/* ------------------------------- */
 /* Header */
 /* ------------------------------- */
-.header {
-  width: 100%;
-  background-color: #323232;
-  color: #ffffff;
-}
-
-:root {
-  font-family: Avenir;
-}
-@font-face {
-  font-family: "Avenir";
-  src: url("../../assets/Font/AvenirNextLTPro-Regular.otf") format("opentype"), url("../../assets/Font/AvenirNextLTPro-Demi.otf") format("opentype"), url("../../assets/Font/AvenirNextLTPro-Bold.otf") format("opentype");
-}
-
 .header {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  background-color: #323232;
+  color: #ffffff;
 }
 @media screen and (min-width: 768px) {
   .header {
@@ -119,6 +114,14 @@ a {
   border-bottom: 4px solid #ffffff;
 }
 
+:root {
+  font-family: Avenir;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("../../assets/Font/AvenirNextLTPro-Regular.otf") format("opentype"), url("../../assets/Font/AvenirNextLTPro-Demi.otf") format("opentype"), url("../../assets/Font/AvenirNextLTPro-Bold.otf") format("opentype");
+}
+
 .hero {
   position: relative;
   display: flex;
@@ -129,7 +132,7 @@ a {
   background-color: #323232;
   background-position: center;
   background-size: cover;
-  height: 18rem;
+  height: 12rem;
 }
 @media screen and (min-width: 768px) {
   .hero {
@@ -150,6 +153,7 @@ a {
   left: 2rem;
   position: absolute;
   color: #ffffff;
+  transform: translateY(-50%);
 }
 @media screen and (min-width: 768px) {
   .hero__title {
@@ -157,4 +161,56 @@ a {
     line-height: 4.25rem;
     font-weight: 700;
   }
+}
+
+.about {
+  margin: 0 1rem;
+}
+.about__title {
+  font-size: 1.5rem;
+  line-height: 2.75rem;
+  font-weight: 700;
+  margin: 24px 0 0 0;
+}
+.about__image {
+  margin-bottom: 1rem;
+}
+.about__quote {
+  font-size: 14.5px;
+  font-weight: 700;
+  padding-bottom: 1.25rem;
+}
+.about__quote-text {
+  margin-bottom: 0.25rem;
+}
+.about__headline {
+  font-size: 0.9rem;
+  line-height: 1.125rem;
+  font-weight: 400;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.about__text-block {
+  font-size: 0.9rem;
+  line-height: 1.125rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+
+.gallery {
+  margin: 0 1rem;
+  background-color: #fafafa;
+}
+.gallery__title {
+  font-size: 1.5rem;
+  line-height: 2.75rem;
+  font-weight: 700;
+  margin: 24px 0 0 0;
+}
+.gallery__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }/*# sourceMappingURL=bios.css.map */
