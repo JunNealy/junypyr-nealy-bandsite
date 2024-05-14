@@ -8,10 +8,14 @@
 
   @include tablet {
     @include flex(row, center, center);
-    padding: 0 2rem;
   }
   &__word-mark {
+    margin-top: 1rem;
     font-weight: 400;
+
+    @include tablet {
+      margin: 0 2rem;
+    }
   }
 }
 
@@ -21,41 +25,86 @@
   &__list {
     @include flex(row, center, center);
     list-style: none;
-  }
-
-  @include tablet {
-    @include flex(row, flex-start, center);
-  }
-
-  &__list-link {
-    text-align: center;
-    width: 100%;
-    padding-bottom: 0.5rem;
-    font-weight: 400;
-    color: $silver;
 
     @include tablet {
-      text-align: left;
-      width: max-content;
-      padding-bottom: 1.5rem;
-      margin-left: 4rem;
+      @include flex(row, flex-start, center);
     }
-    &--selected {
-      @extend .nav__list-link;
-      color: $white;
-      border-bottom: 4px solid white;
-      font-weight: 700;
-    }
-  }
 
-  &__list-link:hover {
-    @extend .nav__list-link;
-    color: $white;
-    border-bottom: 4px solid white;
-    font-weight: 700;
-    border-bottom: 4px solid white;
+    &-link {
+      width: 100%;
+      text-align: center;
+      line-height: 2rem;
+
+      @include tablet {
+        line-height: 4rem;
+        width: max-content;
+        margin-left: 3rem;
+      }
+
+      &--active {
+        @extend .nav__list-link;
+        border-bottom: 4px solid white;
+      }
+      &:hover {
+        @extend .nav__list-link;
+        border-bottom: 4px solid white;
+      }
+    }
   }
 }
+
+// .nav {
+//   width: 100%;
+//   height: 100%;
+
+//   &__list {
+//     @include flex(row, center, center);
+//     list-style: none;
+//     height: 100%;
+//   }
+
+//   &__list-link {
+//     text-align: center;
+//     width: 100%;
+//     height: 100%;
+//     padding-bottom: 0.75rem;
+//     font-weight: 400;
+//     color: $silver;
+
+//     &-content {
+//       @include flex(row, center, center);
+//       height: 3rem;
+//       width: 100%;
+
+//       &--active {
+//         @extend .nav__list-link-content;
+//         color: $white;
+//         border-bottom: 4px solid white;
+//         font-weight: 700;
+//       }
+//     }
+
+//     @include tablet {
+//       &__list-link {
+//         padding-bottom: 0;
+//       }
+//     }
+
+//     &--selected {
+//       @extend .nav__list-link;
+//       color: $white;
+//       border-bottom: 4px solid white;
+//       font-weight: 700;
+//     }
+//   }
+
+//   &__list-link:hover {
+//     @extend .nav__list-link;
+//     color: $white;
+//     border-bottom: 4px solid white;
+//     font-weight: 700;
+//   }
+// }
 
 .hero {
   position: relative;

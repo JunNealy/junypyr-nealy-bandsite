@@ -66,11 +66,16 @@ a {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 0 2rem;
   }
 }
 .header__word-mark {
+  margin-top: 1rem;
   font-weight: 400;
+}
+@media screen and (min-width: 768px) {
+  .header__word-mark {
+    margin: 0 2rem;
+  }
 }
 
 .nav {
@@ -84,38 +89,30 @@ a {
   list-style: none;
 }
 @media screen and (min-width: 768px) {
-  .nav {
+  .nav__list {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
   }
 }
-.nav__list-link, .nav__list-link:hover, .nav__list-link--selected:hover, .nav__list-link--selected {
-  text-align: center;
+.nav__list-link, .nav__list-link:hover, .nav__list-link--active:hover, .nav__list-link--active {
   width: 100%;
-  padding-bottom: 0.5rem;
-  font-weight: 400;
-  color: #afafaf;
+  text-align: center;
+  line-height: 2rem;
 }
 @media screen and (min-width: 768px) {
-  .nav__list-link, .nav__list-link:hover, .nav__list-link--selected:hover, .nav__list-link--selected {
-    text-align: left;
+  .nav__list-link, .nav__list-link:hover, .nav__list-link--active:hover, .nav__list-link--active {
+    line-height: 4rem;
     width: -moz-max-content;
     width: max-content;
-    padding-bottom: 1.5rem;
-    margin-left: 4rem;
+    margin-left: 3rem;
   }
 }
-.nav__list-link--selected {
-  color: #ffffff;
+.nav__list-link--active {
   border-bottom: 4px solid white;
-  font-weight: 700;
 }
-.nav__list-link:hover, .nav__list-link--selected:hover {
-  color: #ffffff;
-  border-bottom: 4px solid white;
-  font-weight: 700;
+.nav__list-link:hover, .nav__list-link--active:hover {
   border-bottom: 4px solid white;
 }
 
