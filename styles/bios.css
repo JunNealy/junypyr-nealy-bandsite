@@ -136,7 +136,7 @@ a {
 }
 @media screen and (min-width: 768px) {
   .hero {
-    height: 36rem;
+    height: 28rem;
   }
 }
 .hero__overlay {
@@ -164,13 +164,38 @@ a {
 }
 
 .about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin: 0 1rem;
 }
+@media screen and (min-width: 768px) {
+  .about {
+    margin: 0 4rem;
+  }
+}
+.about__content-container {
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .about__content-container {
+    width: 88%;
+  }
+}
 .about__title {
+  align-self: flex-start;
   font-size: 1.5rem;
   line-height: 2.75rem;
   font-weight: 700;
   margin: 24px 0 0 0;
+}
+@media screen and (min-width: 768px) {
+  .about {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-weight: 700;
+  }
 }
 .about__image {
   margin-bottom: 1rem;
@@ -179,6 +204,13 @@ a {
   font-size: 14.5px;
   font-weight: 700;
   padding-bottom: 1.25rem;
+}
+@media screen and (min-width: 768px) {
+  .about__quote {
+    font-size: 1.3rem;
+    line-height: 2rem;
+    font-weight: 700;
+  }
 }
 .about__quote-text {
   margin-bottom: 0.25rem;
@@ -190,11 +222,40 @@ a {
   font-weight: 700;
   margin-bottom: 0.5rem;
 }
+@media screen and (min-width: 768px) {
+  .about__headline {
+    font-size: 1.3rem;
+    line-height: 2rem;
+    font-weight: 700;
+  }
+}
+.about__text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .about__text-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1.25rem;
+  }
+}
 .about__text-block {
   font-size: 0.9rem;
   line-height: 1.125rem;
   font-weight: 400;
   margin-bottom: 0.5rem;
+}
+@media screen and (min-width: 768px) {
+  .about__text-block {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 400;
+  }
 }
 
 .gallery {
@@ -206,6 +267,7 @@ a {
   line-height: 2.75rem;
   font-weight: 700;
   margin: 24px 0 0 0;
+  padding-top: 1rem;
 }
 .gallery__container {
   display: flex;
@@ -213,4 +275,22 @@ a {
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .gallery__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
+.gallery__image {
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .gallery__image {
+    width: 30%;
+  }
 }/*# sourceMappingURL=bios.css.map */
