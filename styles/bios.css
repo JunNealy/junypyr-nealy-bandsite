@@ -1,3 +1,11 @@
+:root {
+  font-family: Avenir;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("../../assets/Font/AvenirNextLTPro-Regular.otf") format("opentype"), url("../../assets/Font/AvenirNextLTPro-Demi.otf") format("opentype"), url("../../assets/Font/AvenirNextLTPro-Bold.otf") format("opentype");
+}
+
 /* ------------------------------- */
 /* Resets */
 /* ------------------------------- */
@@ -37,13 +45,13 @@ a {
   color: inherit;
 }
 
+address {
+  font-style: normal;
+}
+
 /* ------------------------------- */
 /* Utility Classe */
 /* ------------------------------- */
-.container-wide {
-  width: 90%;
-}
-
 /* ------------------------------- */
 /* Header */
 /* ------------------------------- */
@@ -114,12 +122,51 @@ a {
   border-bottom: 4px solid #ffffff;
 }
 
-:root {
-  font-family: Avenir;
+/* ------------------------------- */
+/* Footer */
+/* ------------------------------- */
+.footer {
+  margin: 1.5rem 0;
+  padding: 0 1.25rem;
+  background-color: #323232;
+  color: #ffffff;
 }
-@font-face {
-  font-family: "Avenir";
-  src: url("../../assets/Font/AvenirNextLTPro-Regular.otf") format("opentype"), url("../../assets/Font/AvenirNextLTPro-Demi.otf") format("opentype"), url("../../assets/Font/AvenirNextLTPro-Bold.otf") format("opentype");
+.footer__wordmark--desk-tab {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .footer__wordmark--desk-tab {
+    display: inline-block;
+  }
+}
+.footer__branding {
+  margin-bottom: 1rem;
+}
+.footer__branding-title {
+  font-size: 1.5rem;
+  line-height: 2.75rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.footer__branding-social-icon {
+  margin-right: 2rem;
+}
+.footer__contact-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.footer__contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+  font-size: 0.813rem;
+  line-height: 1.125rem;
+  font-weight: 400;
 }
 
 .hero {

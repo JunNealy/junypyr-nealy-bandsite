@@ -1,5 +1,6 @@
 @use './variables' as *;
 @use './mixins' as *;
+@use './typography-mixins' as *;
 
 /* ------------------------------- */
 /* Resets */
@@ -40,13 +41,13 @@ a {
   color: inherit;
 }
 
+address {
+  font-style: normal;
+}
+
 /* ------------------------------- */
 /* Utility Classe */
 /* ------------------------------- */
-
-.container-wide {
-  width: 90%;
-}
 
 /* ------------------------------- */
 /* Header */
@@ -104,5 +105,48 @@ a {
         border-bottom: 4px solid $white;
       }
     }
+  }
+}
+
+/* ------------------------------- */
+/* Footer */
+/* ------------------------------- */
+
+.footer {
+  margin: 1.5rem 0;
+  padding: 0 1.25rem;
+  background-color: $bandsite-black;
+  color: $white;
+
+  &__wordmark--desk-tab {
+    display: none;
+
+    @include tablet {
+      display: inline-block;
+    }
+  }
+
+  &__branding {
+    margin-bottom: 1rem;
+
+    &-title {
+      @include mobi-section-header;
+      margin-bottom: 0.5rem;
+    }
+
+    &-social-icon {
+      margin-right: 2rem;
+    }
+  }
+
+  &__contact-container {
+    @include flex(column, center, flex-start);
+    gap: 1rem;
+  }
+
+  &__contact {
+    @include flex(column, center, flex-start);
+    gap: 1rem;
+    @include mobi-footer-copy;
   }
 }
