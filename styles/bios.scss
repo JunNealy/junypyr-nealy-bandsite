@@ -26,7 +26,7 @@
   &__title {
     @include mobi-page-header;
     top: 50%;
-    left: 2rem;
+    left: 1rem;
     position: absolute;
     color: $white;
     transform: translateY(-50%);
@@ -39,7 +39,7 @@
 
 .about {
   @include flex(column, center, center);
-  margin: 0 1rem;
+  margin: $mobile-container;
 
   @include tablet {
     margin: 0 4rem;
@@ -68,14 +68,14 @@
   &__quote {
     font-size: 14.5px;
     font-weight: 700;
-    padding-bottom: 1.25rem;
+    margin-bottom: 1.25rem;
 
     @include tablet {
       @include desk-tab-sub-header;
     }
 
     &-text {
-      margin-bottom: 0.25rem;
+      margin-bottom: 0.5rem;
     }
   }
 
@@ -100,7 +100,7 @@
 
   &__text-block {
     @include mobi-body-copy;
-    margin-bottom: 0.5rem;
+    @include mobi-component-margin;
 
     @include tablet {
       @include desk-tab-body-copy;
@@ -109,18 +109,17 @@
 }
 
 .gallery {
-  margin: 0 1rem;
+  @include flex(column, center, flex-start);
+  margin: $mobile-container;
   background-color: $alabaster;
 
   &__title {
     @include mobi-section-header;
     @include mobi-headline-margin;
-    padding-top: 1rem;
   }
 
   &__container {
     @include flex(column, center, center);
-    gap: 1rem;
     width: 100%;
 
     @include tablet {
@@ -131,6 +130,7 @@
 
   &__image {
     width: 100%;
+    @include mobi-component-margin;
 
     @include tablet {
       width: 30%;
