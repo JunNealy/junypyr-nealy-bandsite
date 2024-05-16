@@ -131,6 +131,11 @@ address {
   background-color: #323232;
   color: #ffffff;
 }
+@media screen and (min-width: 768px) {
+  .footer {
+    padding: 2rem 4rem;
+  }
+}
 .footer__wordmark--desk-tab {
   display: none;
 }
@@ -140,7 +145,19 @@ address {
   }
 }
 .footer__branding {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
   margin-bottom: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .footer__branding {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 .footer__branding-title {
   font-size: 1.5rem;
@@ -148,8 +165,38 @@ address {
   font-weight: 700;
   margin-bottom: 0.5rem;
 }
+@media screen and (min-width: 768px) {
+  .footer__branding-title {
+    margin-bottom: 0;
+  }
+}
+.footer__branding-socials {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+@media screen and (min-width: 768px) {
+  .footer__branding-socials {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.footer__branding-socials-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
 .footer__branding-social-icon {
   margin-right: 2rem;
+}
+@media screen and (min-width: 768px) {
+  .footer__branding-social-icon {
+    margin: 0 2rem;
+  }
 }
 .footer__contact-container {
   display: flex;
@@ -157,6 +204,15 @@ address {
   justify-content: center;
   align-items: flex-start;
   gap: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .footer__contact-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 3rem;
+  }
 }
 .footer__contact {
   display: flex;

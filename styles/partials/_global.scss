@@ -118,6 +118,10 @@ address {
   background-color: $bandsite-black;
   color: $white;
 
+  @include tablet {
+    padding: 2rem 4rem;
+  }
+
   &__wordmark--desk-tab {
     display: none;
 
@@ -127,21 +131,49 @@ address {
   }
 
   &__branding {
+    @include flex(column, center, flex-start);
     margin-bottom: 1rem;
 
+    @include tablet {
+      @include flex(row, space-between, center);
+    }
     &-title {
       @include mobi-section-header;
       margin-bottom: 0.5rem;
+
+      @include tablet {
+        margin-bottom: 0;
+      }
     }
 
+    &-socials {
+      @include flex(column, center, flex-start);
+
+      @include tablet {
+        @include flex(row, space-between, center);
+      }
+
+      &-icons {
+        @include flex(row, center, center);
+      }
+    }
     &-social-icon {
       margin-right: 2rem;
+
+      @include tablet {
+        margin: 0 2rem;
+      }
     }
   }
 
   &__contact-container {
     @include flex(column, center, flex-start);
     gap: 1rem;
+
+    @include tablet {
+      @include flex(row, space-between, flex-start);
+      margin-bottom: 3rem;
+    }
   }
 
   &__contact {
