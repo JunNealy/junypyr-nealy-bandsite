@@ -33,6 +33,7 @@
 
     @include tablet {
       @include desk-tab-page-header;
+      left: 2.25rem;
     }
   }
 }
@@ -42,7 +43,7 @@
   margin: $mobile-container;
 
   @include tablet {
-    margin: 0 4rem;
+    margin: $tab-container;
   }
 
   &__content-container {
@@ -55,6 +56,10 @@
     align-self: flex-start;
     @include mobi-section-header;
     @include mobi-headline-margin;
+
+    @include tablet {
+      @include desk-tab-headline-margin;
+    }
   }
 
   @include tablet {
@@ -66,16 +71,25 @@
   }
 
   &__quote {
-    font-size: 14.5px;
+    font-size: 0.9063rem;
     font-weight: 700;
     margin-bottom: 1.25rem;
 
     @include tablet {
       @include desk-tab-sub-header;
+      margin-bottom: 2.25rem;
     }
 
     &-text {
       margin-bottom: 0.5rem;
+    }
+
+    &-attribution {
+      font-size: inherit;
+      @include tablet {
+        @include desk-tab-body-copy;
+        font-weight: 700;
+      }
     }
   }
 
@@ -113,9 +127,17 @@
   margin: $mobile-container;
   background-color: $alabaster;
 
+  @include tablet {
+    margin: $tab-container;
+  }
+
   &__title {
     @include mobi-section-header;
     @include mobi-headline-margin;
+
+    @include tablet {
+      @include desk-tab-headline-margin;
+    }
   }
 
   &__container {
@@ -123,8 +145,9 @@
     width: 100%;
 
     @include tablet {
-      @include flex(row, center, center);
+      @include flex(row, space-between, space-between);
       flex-wrap: wrap;
+      margin-bottom: 1.125rem;
     }
   }
 
@@ -133,7 +156,7 @@
     @include mobi-component-margin;
 
     @include tablet {
-      width: 30%;
+      width: 31.5%;
     }
   }
 }

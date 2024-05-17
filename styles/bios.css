@@ -270,6 +270,7 @@ address {
     font-size: 3.75rem;
     line-height: 4.25rem;
     font-weight: 700;
+    left: 2.25rem;
   }
 }
 
@@ -282,7 +283,7 @@ address {
 }
 @media screen and (min-width: 768px) {
   .about {
-    margin: 0 4rem;
+    margin: 0 2.25rem;
   }
 }
 .about__content-container {
@@ -301,6 +302,11 @@ address {
   margin: 1.5rem 0 0 0;
 }
 @media screen and (min-width: 768px) {
+  .about__title {
+    margin: 2.25rem 0 1rem 0;
+  }
+}
+@media screen and (min-width: 768px) {
   .about {
     font-size: 2.25rem;
     line-height: 2.75rem;
@@ -311,7 +317,7 @@ address {
   margin-bottom: 1rem;
 }
 .about__quote {
-  font-size: 14.5px;
+  font-size: 0.9063rem;
   font-weight: 700;
   margin-bottom: 1.25rem;
 }
@@ -320,10 +326,22 @@ address {
     font-size: 1.3rem;
     line-height: 2rem;
     font-weight: 700;
+    margin-bottom: 2.25rem;
   }
 }
 .about__quote-text {
   margin-bottom: 0.5rem;
+}
+.about__quote-attribution {
+  font-size: inherit;
+}
+@media screen and (min-width: 768px) {
+  .about__quote-attribution {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 400;
+    font-weight: 700;
+  }
 }
 .about__headline {
   font-size: 0.9rem;
@@ -376,11 +394,21 @@ address {
   margin: 0 1rem;
   background-color: #fafafa;
 }
+@media screen and (min-width: 768px) {
+  .gallery {
+    margin: 0 2.25rem;
+  }
+}
 .gallery__title {
   font-size: 1.5rem;
   line-height: 2.75rem;
   font-weight: 700;
   margin: 1.5rem 0 0 0;
+}
+@media screen and (min-width: 768px) {
+  .gallery__title {
+    margin: 2.25rem 0 1rem 0;
+  }
 }
 .gallery__container {
   display: flex;
@@ -393,9 +421,10 @@ address {
   .gallery__container {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
+    align-items: space-between;
     flex-wrap: wrap;
+    margin-bottom: 1.125rem;
   }
 }
 .gallery__image {
@@ -404,6 +433,6 @@ address {
 }
 @media screen and (min-width: 768px) {
   .gallery__image {
-    width: 30%;
+    width: 31.5%;
   }
 }/*# sourceMappingURL=bios.css.map */
