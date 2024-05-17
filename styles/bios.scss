@@ -16,6 +16,10 @@
     height: 28rem;
   }
 
+  @include desktop {
+    height: 32rem;
+  }
+
   &__overlay {
     width: 100%;
     height: 100%;
@@ -35,6 +39,10 @@
       @include desk-tab-page-header;
       left: 2.25rem;
     }
+
+    @include desktop {
+      left: 5.4375rem;
+    }
   }
 }
 
@@ -46,10 +54,18 @@
     margin: $tab-container;
   }
 
+  @include desktop {
+    margin: $desk-container;
+  }
+
   &__content-container {
     width: 100%;
     @include tablet {
       width: 88%;
+    }
+
+    @include desktop {
+      width: 86%;
     }
   }
   &__title {
@@ -129,6 +145,10 @@
 
   @include tablet {
     margin: $tab-container;
+  }
+
+  @include desktop {
+    margin: $desk-container;
   }
 
   &__title {
