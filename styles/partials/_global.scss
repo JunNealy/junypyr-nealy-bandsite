@@ -129,10 +129,12 @@ address {
   }
 
   &__wordmark--mobi {
+    margin-top: 1.5rem;
     display: inline-block;
     @include mobi-component-margin;
 
     @include tablet {
+      margin-top: 0;
       display: none;
     }
   }

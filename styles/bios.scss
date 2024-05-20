@@ -65,7 +65,7 @@
     }
 
     @include desktop {
-      width: 90%;
+      width: 85%;
     }
   }
   &__title {
@@ -74,6 +74,7 @@
     @include mobi-headline-margin;
 
     @include tablet {
+      @include desk-tab-section-header;
       @include desk-tab-headline-margin;
     }
   }
@@ -99,7 +100,7 @@
 
     @include desktop {
       line-height: 2rem;
-      font-size: 1.7rem;
+      font-size: 1.65rem;
       width: 83%;
     }
 

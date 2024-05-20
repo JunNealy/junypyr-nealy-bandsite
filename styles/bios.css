@@ -150,11 +150,13 @@ address {
   }
 }
 .footer__wordmark--mobi {
+  margin-top: 1.5rem;
   display: inline-block;
   margin-bottom: 1rem;
 }
 @media screen and (min-width: 768px) {
   .footer__wordmark--mobi {
+    margin-top: 0;
     display: none;
   }
 }
@@ -375,7 +377,7 @@ address {
 }
 @media screen and (min-width: 1280px) {
   .about__content-container {
-    width: 90%;
+    width: 85%;
   }
 }
 .about__title {
@@ -387,6 +389,9 @@ address {
 }
 @media screen and (min-width: 768px) {
   .about__title {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-weight: 700;
     margin: 2.25rem 0 1rem 0;
   }
 }
@@ -415,7 +420,7 @@ address {
 @media screen and (min-width: 1280px) {
   .about__quote {
     line-height: 2rem;
-    font-size: 1.7rem;
+    font-size: 1.65rem;
     width: 83%;
   }
 }
