@@ -46,10 +46,6 @@ address {
 }
 
 /* ------------------------------- */
-/* Utility Classe */
-/* ------------------------------- */
-
-/* ------------------------------- */
 /* Header */
 /* ------------------------------- */
 
@@ -68,11 +64,11 @@ address {
     padding: $desk-container;
   }
   &__word-mark {
-    margin-top: 1rem;
+    margin: 1rem 0;
     font-weight: 400;
 
     @include tablet {
-      margin-top: 0;
+      margin: 0 0;
     }
   }
 }
@@ -123,11 +119,26 @@ address {
   padding: $mobile-container;
   background-color: $bandsite-black;
   color: $white;
+  padding-bottom: 2rem;
 
   @include tablet {
     padding: $tab-container;
+    padding-bottom: 3rem;
   }
 
+  @include desktop {
+    padding: $desk-container;
+    padding-bottom: 3rem;
+  }
+
+  &__wordmark--mobi {
+    display: inline-block;
+    margin-bottom: 1rem;
+
+    @include tablet {
+      display: none;
+    }
+  }
   &__wordmark--desk-tab {
     display: none;
 
@@ -165,6 +176,10 @@ address {
         gap: 2rem;
       }
 
+      @include desktop {
+        gap: 2.75rem;
+      }
+
       &-icons {
         @include flex(row, center, center);
       }
@@ -190,6 +205,11 @@ address {
       @include flex(row, space-between, space-between);
       margin-bottom: 3rem;
     }
+
+    @include desktop {
+      @include flex(row, flex-start, flex-start);
+      gap: 4rem;
+    }
   }
 
   &__contact {
@@ -200,10 +220,19 @@ address {
 
     @include tablet {
       margin-bottom: 0;
+      @include desk-tab-footer-copy;
     }
 
     &-name {
       font-weight: 700;
+    }
+  }
+
+  &__copyright {
+    @include mobi-footer-copy;
+
+    @include tablet {
+      @include desk-tab-footer-copy;
     }
   }
 }

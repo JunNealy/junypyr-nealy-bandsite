@@ -96,6 +96,10 @@
       margin-bottom: 2.25rem;
     }
 
+    @include desktop {
+      width: 83%;
+    }
+
     &-text {
       margin-bottom: 0.5rem;
     }
@@ -117,6 +121,10 @@
     @include tablet {
       @include desk-tab-sub-header;
     }
+
+    @include desktop {
+      margin-bottom: 1rem;
+    }
   }
 
   &__text-container {
@@ -125,6 +133,10 @@
     @include tablet {
       @include flex(row, center, center);
       gap: 1.25rem;
+    }
+
+    @include desktop {
+      gap: 1.5rem;
     }
   }
 
@@ -168,6 +180,10 @@
       @include flex(row, space-between, space-between);
       flex-wrap: wrap;
       margin-bottom: 1.125rem;
+    }
+
+    @include desktop {
+      margin-bottom: 0.5rem;
     }
   }
 
