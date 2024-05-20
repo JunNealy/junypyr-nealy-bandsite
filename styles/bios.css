@@ -3,7 +3,7 @@
 }
 @font-face {
   font-family: "Avenir";
-  src: url("../../assets/Font/AvenirNextLTPro-Regular.otf") format("opentype"), url("../../assets/Font/AvenirNextLTPro-Demi.otf") format("opentype"), url("../../assets/Font/AvenirNextLTPro-Bold.otf") format("opentype");
+  src: url("../../assets/fonts/AvenirNextLTPro-Regular.otf") format("opentype"), url("../../assets/fonts/AvenirNextLTPro-Demi.otf") format("opentype"), url("../../assets/fonts/AvenirNextLTPro-Bold.otf") format("opentype");
 }
 
 /* ------------------------------- */
@@ -59,7 +59,6 @@ address {
   align-items: center;
   background-color: #323232;
   color: #ffffff;
-  padding: mobi-container;
 }
 @media screen and (min-width: 768px) {
   .header {
@@ -70,14 +69,13 @@ address {
     padding: 0 2.25rem;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1280px) {
   .header {
     padding: 0 5.4375rem;
   }
 }
 .header__word-mark {
   margin: 1rem 0;
-  font-weight: 400;
 }
 @media screen and (min-width: 768px) {
   .header__word-mark {
@@ -145,7 +143,7 @@ address {
     padding-bottom: 3rem;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1280px) {
   .footer {
     padding: 0 5.4375rem;
     padding-bottom: 3rem;
@@ -216,7 +214,7 @@ address {
     gap: 2rem;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1280px) {
   .footer__branding-socials {
     gap: 2.75rem;
   }
@@ -229,11 +227,6 @@ address {
 }
 .footer__branding-social-icon {
   margin-right: 2rem;
-}
-@media screen and (min-width: 768px) {
-  .footer__branding-social-icon {
-    margin-right: 2rem;
-  }
 }
 .footer__contact-container {
   display: flex;
@@ -257,10 +250,9 @@ address {
     flex-direction: row;
     justify-content: space-between;
     align-items: space-between;
-    margin-bottom: 3rem;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1280px) {
   .footer__contact-container {
     display: flex;
     flex-direction: row;
@@ -321,7 +313,7 @@ address {
     height: 28rem;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1280px) {
   .hero {
     height: 32rem;
   }
@@ -350,7 +342,7 @@ address {
     left: 2.25rem;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1280px) {
   .hero__title {
     left: 5.4375rem;
   }
@@ -368,7 +360,7 @@ address {
     margin: 0 2.25rem;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1280px) {
   .about {
     margin: 0 5.4375rem;
   }
@@ -381,9 +373,9 @@ address {
     width: 88%;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1280px) {
   .about__content-container {
-    width: 86%;
+    width: 90%;
   }
 }
 .about__title {
@@ -415,14 +407,15 @@ address {
 }
 @media screen and (min-width: 768px) {
   .about__quote {
-    font-size: 1.3rem;
-    line-height: 2rem;
-    font-weight: 700;
+    line-height: 1.75rem;
+    font-size: 1.5rem;
     margin-bottom: 2.25rem;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1280px) {
   .about__quote {
+    line-height: 2rem;
+    font-size: 1.7rem;
     width: 83%;
   }
 }
@@ -454,7 +447,7 @@ address {
     font-weight: 700;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1280px) {
   .about__headline {
     margin-bottom: 1rem;
   }
@@ -474,9 +467,9 @@ address {
     gap: 1.25rem;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1280px) {
   .about__text-container {
-    gap: 1.5rem;
+    gap: 2.75rem;
   }
 }
 .about__text-block {
@@ -506,7 +499,7 @@ address {
     margin: 0 2.25rem;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1280px) {
   .gallery {
     margin: 0 5.4375rem;
   }
@@ -539,7 +532,7 @@ address {
     margin-bottom: 1.125rem;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1280px) {
   .gallery__container {
     margin-bottom: 0.5rem;
   }
@@ -551,5 +544,10 @@ address {
 @media screen and (min-width: 768px) {
   .gallery__image {
     width: 31.5%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .gallery__image {
+    width: 32%;
   }
 }/*# sourceMappingURL=bios.css.map */

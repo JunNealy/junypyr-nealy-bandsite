@@ -65,7 +65,7 @@
     }
 
     @include desktop {
-      width: 86%;
+      width: 90%;
     }
   }
   &__title {
@@ -92,16 +92,19 @@
     margin-bottom: 1.25rem;
 
     @include tablet {
-      @include desk-tab-sub-header;
+      line-height: 1.75rem;
+      font-size: 1.5rem;
       margin-bottom: 2.25rem;
     }
 
     @include desktop {
+      line-height: 2rem;
+      font-size: 1.7rem;
       width: 83%;
     }
 
     &-text {
-      margin-bottom: 0.5rem;
+      margin-bottom: $text-margin-bottom;
     }
 
     &-attribution {
@@ -116,7 +119,7 @@
   &__headline {
     @include mobi-body-copy;
     font-weight: 700;
-    margin-bottom: 0.5rem;
+    margin-bottom: $text-margin-bottom;
 
     @include tablet {
       @include desk-tab-sub-header;
@@ -136,7 +139,7 @@
     }
 
     @include desktop {
-      gap: 1.5rem;
+      gap: 2.75rem;
     }
   }
 
@@ -183,7 +186,7 @@
     }
 
     @include desktop {
-      margin-bottom: 0.5rem;
+      margin-bottom: $text-margin-bottom;
     }
   }
 
@@ -193,6 +196,10 @@
 
     @include tablet {
       width: 31.5%;
+    }
+
+    @include desktop {
+      width: 32%;
     }
   }
 }

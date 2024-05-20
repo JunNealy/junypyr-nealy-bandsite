@@ -53,7 +53,6 @@ address {
   @include flex(column);
   background-color: $bandsite-black;
   color: $white;
-  padding: mobi-container;
 
   @include tablet {
     @include flex(row, center, center);
@@ -65,7 +64,6 @@ address {
   }
   &__word-mark {
     margin: 1rem 0;
-    font-weight: 400;
 
     @include tablet {
       margin: 0 0;
@@ -75,7 +73,6 @@ address {
 
 .nav {
   width: 100%;
-
   &__list {
     @include flex(row, center, center);
     list-style: none;
@@ -133,7 +130,7 @@ address {
 
   &__wordmark--mobi {
     display: inline-block;
-    margin-bottom: 1rem;
+    @include mobi-component-margin;
 
     @include tablet {
       display: none;
@@ -150,7 +147,7 @@ address {
 
   &__branding {
     @include flex(column, flex-start, flex-start);
-    margin-bottom: 1rem;
+    @include mobi-component-margin;
 
     @include tablet {
       width: 100%;
@@ -186,10 +183,6 @@ address {
     }
     &-social-icon {
       margin-right: 2rem;
-
-      @include tablet {
-        margin-right: 2rem;
-      }
     }
   }
 
@@ -203,7 +196,6 @@ address {
     @include tablet {
       width: 100%;
       @include flex(row, space-between, space-between);
-      margin-bottom: 3rem;
     }
 
     @include desktop {
