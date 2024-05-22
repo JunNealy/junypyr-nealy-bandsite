@@ -46,10 +46,8 @@ function createBuyButton() {
 }
 
 function createSectionTitle() {
-  console.log('run create');
   let sectionTitle = document.createElement('h1');
   sectionTitle.classList.add('shows__title');
-  console.log(sectionTitle);
   sectionTitle.innerText = 'Shows';
   shows.appendChild(sectionTitle);
 }
@@ -79,7 +77,11 @@ function createShows(array) {
     let locationTitle = createParagraphElement('LOCATION');
     let showLocation = createParagraphElement(`${array[i].location}`);
 
-    addClass('dogs', dateTitle, venueTitle, locationTitle);
+    let buyButton = createBuyButton();
+
+    addClass('show__subtitle', dateTitle, venueTitle, locationTitle);
+    addClass('show__info', showDate, showVenue, showLocation);
+    addClass('show__button', buyButton);
 
     showDiv.append(
       dateTitle,
@@ -88,7 +90,7 @@ function createShows(array) {
       showVenue,
       locationTitle,
       showLocation,
-      createBuyButton()
+      butButton
     );
 
     shows.appendChild(showDiv);
