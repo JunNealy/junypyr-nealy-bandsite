@@ -62,22 +62,20 @@ function createShows(array) {
     let showDiv = document.createElement('div');
 
     let dateTitle = createParagraphElement('DATE');
-    let showDate = document.createElement('p');
-    showDate.innerText = `${array[i].date}`;
+    let showDate = createParagraphElement(`${array[i].date}`);
 
-    let venueTitle = document.createElement('p');
-    let showVenue = document.createElement('p');
-    showVenue.innerText = `${array[i].venue}`;
+    let venueTitle = createParagraphElement('VENUE');
+    let showVenue = createParagraphElement(`${array[i].venue}`);
 
-    let locationTitle = document.createElement('p');
+    let locationTitle = createParagraphElement('LOCATION');
+    let showLocation = createParagraphElement(`${array[i].location}`);
 
-    venueTitle.innerText = 'VENUE';
-    locationTitle.innerText = 'LOCATION';
     showDiv.appendChild(dateTitle);
     showDiv.appendChild(showDate);
     showDiv.appendChild(venueTitle);
     showDiv.appendChild(showVenue);
     showDiv.appendChild(locationTitle);
+    showDiv.appendChild(showLocation);
     shows.appendChild(showDiv);
   }
 }
