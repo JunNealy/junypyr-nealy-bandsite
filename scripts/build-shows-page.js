@@ -51,13 +51,17 @@ function createSectionTitle() {
   shows.appendChild(sectionTitle);
 }
 
-createSectionTitle();
+function createParagraphElement(innerText) {
+  paragraphElement = document.createElement('p');
+  paragraphElement.innerText = innerText;
+  return paragraphElement;
+}
 
 function createShows(array) {
   for (let i = 0; i < array.length; i++) {
     let showDiv = document.createElement('div');
 
-    let dateTitle = document.createElement('p');
+    let dateTitle = createParagraphElement('DATE');
     let showDate = document.createElement('p');
     showDate.innerText = `${array[i].date}`;
 
@@ -67,7 +71,6 @@ function createShows(array) {
 
     let locationTitle = document.createElement('p');
 
-    dateTitle.innerText = 'DATE';
     venueTitle.innerText = 'VENUE';
     locationTitle.innerText = 'LOCATION';
     showDiv.appendChild(dateTitle);
@@ -79,4 +82,5 @@ function createShows(array) {
   }
 }
 
+createSectionTitle();
 createShows(showList);
