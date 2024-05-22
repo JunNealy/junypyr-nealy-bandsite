@@ -38,9 +38,12 @@ let showList = [
 
 let shows = document.getElementById('shows');
 
-function createBuyButton() {}
-
-function createShowBoilerplate() {}
+function createBuyButton() {
+  let buyButton = document.createElement('button');
+  buyButton.innerText = 'BUY TICKETS';
+  console.log(buyButton);
+  return buyButton;
+}
 
 function createSectionTitle() {
   console.log('run create');
@@ -57,6 +60,12 @@ function createParagraphElement(innerText) {
   return paragraphElement;
 }
 
+function addClass(className, ...elements) {
+  elements.forEach((element) => {
+    element.classList.add(className);
+  });
+}
+
 function createShows(array) {
   for (let i = 0; i < array.length; i++) {
     let showDiv = document.createElement('div');
@@ -70,23 +79,25 @@ function createShows(array) {
     let locationTitle = createParagraphElement('LOCATION');
     let showLocation = createParagraphElement(`${array[i].location}`);
 
+    addClass('dogs', dateTitle, venueTitle, locationTitle);
+
     showDiv.append(
       dateTitle,
       showDate,
       venueTitle,
       showVenue,
       locationTitle,
-      showLocation
+      showLocation,
+      createBuyButton()
     );
-    // showDiv.appendChild(dateTitle);
-    // showDiv.appendChild(showDate);
-    // showDiv.appendChild(venueTitle);
-    // showDiv.appendChild(showVenue);
-    // showDiv.appendChild(locationTitle);
-    // showDiv.appendChild(showLocation);
+
     shows.appendChild(showDiv);
   }
 }
 
-createSectionTitle();
-createShows(showList);
+function buildShowPage() {
+  createSectionTitle();
+  createShows(showList);
+}
+
+buildShowPage();
