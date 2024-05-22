@@ -42,14 +42,18 @@ function createBuyButton() {}
 
 function createShowBoilerplate() {}
 
-function createShows(array) {
+function createSectionTitle() {
   console.log('run create');
   let sectionTitle = document.createElement('h1');
   sectionTitle.classList.add('shows__title');
   console.log(sectionTitle);
   sectionTitle.innerText = 'Shows';
   shows.appendChild(sectionTitle);
+}
 
+createSectionTitle();
+
+function createShows(array) {
   for (let i = 0; i < array.length; i++) {
     let showDiv = document.createElement('div');
 
