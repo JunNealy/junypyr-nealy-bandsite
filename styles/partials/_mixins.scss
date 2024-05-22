@@ -26,3 +26,11 @@
 @mixin mobi-component-margin {
   margin-bottom: 1rem;
 }
+
+@mixin mobi-cta-button {
+  padding: 0.5rem;
+  cursor: pointer;
+  color: $white;
+  background-color: $bandsite-black;
+  border-radius: 4px;
+}

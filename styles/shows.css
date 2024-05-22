@@ -298,6 +298,10 @@ address {
   }
 }
 
+* {
+  box-sizing: border-box;
+}
+
 .shows__title {
   margin: 1.5rem 0 0 0;
 }
@@ -309,6 +313,12 @@ address {
   align-items: center;
   width: 100%;
   height: 20rem;
+  margin-bottom: 2rem;
+}
+@media screen and (min-width: 768px) {
+  .hero {
+    height: 28rem;
+  }
 }
 .hero__background-img {
   position: relative;
@@ -316,6 +326,7 @@ address {
   height: 100%;
   background-image: url("../assets/images/hero-shows.jpg");
   background-size: cover;
+  background-position: center;
 }
 .hero__background-img-overlay {
   z-index: 10;
@@ -331,11 +342,23 @@ address {
   z-index: 20;
   margin: 0 1rem;
 }
+@media screen and (min-width: 768px) {
+  .hero__content {
+    margin: 0 2.25rem;
+  }
+}
 .hero__subtitle {
   font-size: 0.875rem;
   line-height: 1.375rem;
   font-weight: 600;
   margin: 1.5rem 0 0 0;
+}
+@media screen and (min-width: 768px) {
+  .hero__subtitle {
+    font-size: 1.3rem;
+    line-height: 2rem;
+    font-weight: 700;
+  }
 }
 .hero__title {
   max-width: 70%;
@@ -345,22 +368,63 @@ address {
   color: #ffffff;
   margin: 1.5rem 0 0 0;
 }
+@media screen and (min-width: 768px) {
+  .hero__title {
+    max-width: 80%;
+    font-size: 3.75rem;
+    line-height: 4.25rem;
+    font-weight: 700;
+  }
+}
 .hero__song {
   margin: 1.5rem 0 0 0;
   height: 7rem;
   width: 100%;
 }
+@media screen and (min-width: 768px) {
+  .hero__song {
+    height: 9rem;
+    width: 55%;
+  }
+}
 
 .shows__title {
+  max-width: 100vw;
+  overflow: hidden;
   font-size: 1.5rem;
   line-height: 2.75rem;
   font-weight: 700;
   margin: 0 1rem;
+  margin-bottom: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .shows__title {
+    margin: 0 2.25rem;
+  }
 }
 
+@media screen and (min-width: 768px) {
+  .show-list {
+    margin-bottom: 2.5rem;
+  }
+}
 .show-list__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
   border-bottom: 2px solid #e1e1e1;
   margin-bottom: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .show-list__item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 2.25rem;
+    margin-bottom: 1rem;
+  }
 }
 .show-list__item-info-title {
   font-size: 0.9rem;
@@ -369,7 +433,11 @@ address {
   color: #afafaf;
   margin-bottom: 0.5rem;
   margin: 0 1rem;
-  margin-bottom: 0.5rem;
+}
+@media screen and (min-width: 768px) {
+  .show-list__item-info-title {
+    display: none;
+  }
 }
 .show-list__item-info {
   margin: 0 1rem;
@@ -380,8 +448,23 @@ address {
   margin-bottom: 1rem;
 }
 .show-list__item-button {
-  width: 100%;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+  padding: 0.5rem;
+  cursor: pointer;
   color: #ffffff;
   background-color: #323232;
-  margin: 0 1rem;
+  border-radius: 4px;
+  align-self: center;
+  width: 17.875rem;
+  margin-bottom: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .show-list__item-button {
+    width: 9.375rem;
+  }
+}
+.show-list__item-button:hover {
+  background-color: #000000;
 }/*# sourceMappingURL=shows.css.map */
