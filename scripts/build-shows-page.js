@@ -70,12 +70,20 @@ function createShows(array) {
     let locationTitle = createParagraphElement('LOCATION');
     let showLocation = createParagraphElement(`${array[i].location}`);
 
-    showDiv.appendChild(dateTitle);
-    showDiv.appendChild(showDate);
-    showDiv.appendChild(venueTitle);
-    showDiv.appendChild(showVenue);
-    showDiv.appendChild(locationTitle);
-    showDiv.appendChild(showLocation);
+    showDiv.append(
+      dateTitle,
+      showDate,
+      venueTitle,
+      showVenue,
+      locationTitle,
+      showLocation
+    );
+    // showDiv.appendChild(dateTitle);
+    // showDiv.appendChild(showDate);
+    // showDiv.appendChild(venueTitle);
+    // showDiv.appendChild(showVenue);
+    // showDiv.appendChild(locationTitle);
+    // showDiv.appendChild(showLocation);
     shows.appendChild(showDiv);
   }
 }
