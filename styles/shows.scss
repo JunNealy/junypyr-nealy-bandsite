@@ -1,0 +1,51 @@
+@use './partials/global' as *;
+@use '../styles/partials/variables' as *;
+@use '../styles/partials/mixins' as *;
+@use '../styles/partials/typography-mixins' as *;
+
+.shows__title {
+  @include mobi-headline-margin;
+}
+
+.hero {
+  position: relative;
+  @include flex(row, flex-start, center);
+  background-image: url('../assets/images/hero-shows.jpg');
+  background-color: $bandsite-black;
+  background-position: center;
+  background-size: cover;
+  height: 12rem;
+
+  @include tablet {
+    height: 28rem;
+  }
+
+  @include desktop {
+    height: 32rem;
+  }
+
+  &__overlay {
+    width: 100%;
+    height: 100%;
+    background-color: $bandsite-black;
+    opacity: 50%;
+  }
+
+  &__title {
+    @include mobi-page-header;
+    top: 50%;
+    left: 1rem;
+    position: absolute;
+    color: $white;
+    transform: translateY(-50%);
+
+    @include tablet {
+      @include desk-tab-page-header;
+      left: 2.25rem;
+    }
+
+    @include desktop {
+      left: 5.4375rem;
+    }
+  }
+}
