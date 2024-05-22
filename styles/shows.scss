@@ -8,44 +8,123 @@
 }
 
 .hero {
-  position: relative;
-  @include flex(row, flex-start, center);
-  background-image: url('../assets/images/hero-shows.jpg');
-  background-color: $bandsite-black;
-  background-position: center;
-  background-size: cover;
-  height: 12rem;
+  @include flex(column, center, center);
+  width: 100%;
+  height: 20rem;
 
-  @include tablet {
-    height: 28rem;
-  }
-
-  @include desktop {
-    height: 32rem;
-  }
-
-  &__overlay {
+  &__background-img {
+    position: relative;
     width: 100%;
     height: 100%;
-    background-color: $bandsite-black;
-    opacity: 50%;
+    background-image: url('../assets/images/hero-shows.jpg');
+    background-size: cover;
+    &-overlay {
+      z-index: 10;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: $bandsite-black;
+      opacity: 50%;
+    }
   }
 
-  &__title {
-    @include mobi-page-header;
-    top: 50%;
-    left: 1rem;
+  &__content {
     position: absolute;
     color: $white;
-    transform: translateY(-50%);
+    z-index: 20;
+    margin: $mobile-container;
+  }
 
-    @include tablet {
-      @include desk-tab-page-header;
-      left: 2.25rem;
+  &__subtitle {
+    @include mobi-sub-header;
+    @include mobi-headline-margin;
+  }
+  &__title {
+    max-width: 70%;
+    @include mobi-page-header;
+    color: $white;
+    @include mobi-headline-margin;
+  }
+
+  &__song {
+    @include mobi-headline-margin;
+    height: 7rem;
+    width: 100%;
+  }
+}
+
+.shows {
+  &__title {
+    @include mobi-section-header;
+    margin: $mobile-container;
+  }
+}
+
+.show-list {
+  &__item {
+    border-bottom: 2px solid $mercury;
+    margin-bottom: 1rem;
+    &-info-title {
+      @include show-info-title;
+      margin: $mobile-container;
+      margin-bottom: 0.5rem;
     }
 
-    @include desktop {
-      left: 5.4375rem;
+    &-info {
+      margin: $mobile-container;
+      @include show-info;
+    }
+    &-button {
+      width: 100%;
+      color: $white;
+      background-color: $bandsite-black;
+      margin: $mobile-container;
     }
   }
 }
+
+// show
+// show__subtitle
+
+//  addClass('show__info', showDate, showVenue, showLocation);
+//     addClass('show__button',
+
+// position: relative;
+// @include flex(column, flex-start, center);
+// background-image: url('../assets/images/hero-shows.jpg');
+// background-color: $bandsite-black;
+// background-position: center;
+// background-size: cover;
+
+// @include tablet {
+//   height: 28rem;
+// }
+
+// @include desktop {
+//   height: 32rem;
+// }
+
+// &__overlay {
+//   width: 100%;
+//   height: 100%;
+//   background-color: $bandsite-black;
+//   opacity: 50%;
+// }
+
+// &__title {
+//   @include mobi-page-header;
+//   top: 50%;
+//   left: 1rem;
+//   position: absolute;
+//   color: $white;
+//   transform: translateY(-50%);
+
+//   @include tablet {
+//     @include desk-tab-page-header;
+//     left: 2.25rem;
+//   }
+
+//   @include desktop {
+//     left: 5.4375rem;
+//   }
+// }

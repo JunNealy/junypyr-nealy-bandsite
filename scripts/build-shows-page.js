@@ -36,7 +36,7 @@ let showList = [
   },
 ];
 
-let shows = document.getElementById('shows');
+let shows = document.querySelector('.show-list');
 
 function createBuyButton() {
   let buyButton = document.createElement('button');
@@ -67,6 +67,7 @@ function addClass(className, ...elements) {
 function createShows(array) {
   for (let i = 0; i < array.length; i++) {
     let showDiv = document.createElement('div');
+    addClass('show-list__item', showDiv);
 
     let dateTitle = createParagraphElement('DATE');
     let showDate = createParagraphElement(`${array[i].date}`);
@@ -79,9 +80,14 @@ function createShows(array) {
 
     let buyButton = createBuyButton();
 
-    addClass('show__subtitle', dateTitle, venueTitle, locationTitle);
-    addClass('show__info', showDate, showVenue, showLocation);
-    addClass('show__button', buyButton);
+    addClass(
+      'show-list__item-info-title',
+      dateTitle,
+      venueTitle,
+      locationTitle
+    );
+    addClass('show-list__item-info', showDate, showVenue, showLocation);
+    addClass('show-list__item-button', buyButton);
 
     showDiv.append(
       dateTitle,
@@ -90,7 +96,7 @@ function createShows(array) {
       showVenue,
       locationTitle,
       showLocation,
-      butButton
+      buyButton
     );
 
     shows.appendChild(showDiv);
