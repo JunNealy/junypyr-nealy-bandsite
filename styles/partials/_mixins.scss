@@ -34,3 +34,9 @@
   background-color: $bandsite-black;
   border-radius: 4px;
 }
+
+@mixin input-box {
+  border: 1px solid $mercury;
+  border-radius: 4px;
+  padding: 0.75rem;
+}
