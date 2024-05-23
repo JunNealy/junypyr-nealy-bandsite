@@ -3,7 +3,7 @@
 @use '../styles/partials/mixins' as *;
 @use '../styles/partials/typography-mixins' as *;
 
-* {
+body {
   box-sizing: border-box;
 }
 
@@ -39,13 +39,19 @@
   }
 
   &__content {
-    position: absolute;
+    position: relative;
     color: $white;
     z-index: 20;
     margin: $mobile-container;
 
     @include tablet {
       margin: $tab-container;
+    }
+    @include desktop {
+      margin: 0;
+      padding: $desk-container;
+      height: 100%;
+      @include flex(row, space-between, center);
     }
   }
 
@@ -67,6 +73,13 @@
       max-width: 80%;
       @include desk-tab-page-header;
     }
+
+    @include desktop {
+      max-width: 100%;
+      font-size: 2rem;
+      line-height: 2.5rem;
+      padding: 0;
+    }
   }
 
   &__song {
@@ -78,37 +91,64 @@
       height: 9rem;
       width: 55%;
     }
+
+    @include desktop {
+      justify-self: flex-end;
+      height: 7rem;
+      width: 20rem;
+    }
   }
 }
 
 .shows {
+  @include flex(column);
+  @include desktop {
+    margin: $desk-container;
+    @include flex(row, space-between);
+  }
   &__title {
     max-width: 100vw;
     overflow: hidden;
     @include mobi-section-header;
     margin: $mobile-container;
     margin-bottom: 1rem;
+    align-self: flex-start;
 
     @include tablet {
+      align-self: flex-start;
       margin: $tab-container;
+    }
+
+    @include desktop {
+      align-self: flex-start;
     }
   }
 }
 
 .show-list {
+  width: 100%;
+
   @include tablet {
-    margin-bottom: 2.5rem;
+    padding: 0 2rem 2rem 2rem;
   }
+
+  @include desktop {
+    width: 80%;
+  }
+
   &__item {
     @include flex(column, flex-start, flex-start);
-
+    width: 100%;
     border-bottom: 2px solid $mercury;
     margin-bottom: 1rem;
 
     @include tablet {
       @include flex(row, space-between, center);
-      margin: $tab-container;
       margin-bottom: 1rem;
+
+      @include desktop {
+        margin: 1rem 0;
+      }
     }
     &-info-title {
       @include show-info-title;
@@ -120,8 +160,13 @@
     }
 
     &-info {
-      margin: $mobile-container;
       @include show-info;
+      margin: $mobile-container;
+      margin-bottom: 0.5rem;
+
+      @include tablet {
+        margin: 0;
+      }
     }
     &-button {
       @include mobi-labels-bottons;
@@ -140,6 +185,27 @@
     }
   }
 }
+
+// .desk-tab-title-list {
+//   display: none;
+
+//   @include tablet {
+//     margin: $tab-container;
+//     display: block;
+//     @include flex(row, flex-start, center);
+//   }
+
+//   &__date {
+//     @include tablet {
+//       margin-right: 19.5vw;
+//     }
+//   }
+//   &__venue {
+//     @include tablet {
+//       margin-right: 6.65rem;
+//     }
+//   }
+// }
 
 // show
 // show__subtitle
