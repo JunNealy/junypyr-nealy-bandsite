@@ -216,7 +216,7 @@
     @include flex(row, center, flex-start);
     justify-content: space-between;
     margin: 1rem 0.5rem 0.5rem 0.5rem;
-    border-bottom: 1px solid $mercury;
+    border-bottom: $divider;
 
     &-user-image {
       margin-top: 1rem;
@@ -273,54 +273,46 @@
       }
     }
   }
+
+  .comments__container {
+  }
 }
 
 .comment {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: 0.5rem;
-  border-bottom: 3px solid grey;
-}
+  margin: 1rem 0.5rem 0.5rem 0.5rem;
+  border-bottom: $divider;
 
-.img {
-  width: 50px;
-  height: 50px;
-  border-radius: 500px;
-  background-color: grey;
-}
-
-.comment__content {
-  width: 70%;
-  margin-bottom: 0.5rem;
-}
-
-.comment__content-head {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-
-.comment__content-head--username {
-  font-weight: bold;
-  padding: 0;
-  margin: 0;
-}
-
-.comment__content-head--date {
-  color: grey;
-  padding: 0;
-  margin: 0;
-}
-
-@media screen and (min-width: 768px) {
-  .comment__content {
-    width: 90%;
-    margin-bottom: 0.5rem;
+  &__img {
+    width: 50px;
+    height: 50px;
+    border-radius: 500px;
+    background-color: $mercury;
   }
 
-  .comment {
-    margin: 2rem;
+  &__content {
+    width: 75%;
+    margin-bottom: 0.5rem;
+
+    &-head {
+      @include flex(row, space-between, flex-start);
+      margin-bottom: 0.5rem;
+
+      &--username {
+        @include mobi-body-copy;
+        font-weight: bold;
+      }
+
+      &--date {
+        @include mobi-body-copy;
+        color: grey;
+      }
+    }
+
+    &-text {
+      @include mobi-body-copy;
+    }
   }
 }
