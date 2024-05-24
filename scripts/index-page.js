@@ -77,14 +77,18 @@ const createNewComment = (name, date, comment){
   }
 }
 
-commentForm.addEventListener('submit', (e) => {
-  e.preventDefault();
-  let commentName = commentForm.name.value;
+const getCommentDate =() {
   let currentDate = new Date();
   let dateDay = currentDate.getDate();
   let dateMonth = currentDate.getMonth() + 1;
   let dateYear = currentDate.getFullYear();
-  let commentDate = `${dateDay}/${dateMonth}/${dateYear}`;
+  return `${dateDay}/${dateMonth}/${dateYear}`;
+}
+
+commentForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  let commentName = commentForm.name.value;
+  let commentDate = getCommentDate();
   let commentText = commentForm.comment.value;
 
   let newComment = createNewComment(commentName, commentDate, commentText)
