@@ -21,25 +21,62 @@ let comments = [
 
 let commentsContainer = document.querySelector('.comments__container');
 
-comments.forEach((element) => {
-  let comment = document.createElement('div');
-  comment.classList.add('comment');
+const createElement = (elemName, className, content = '') => {
+  let newElement = document.createElement(`${elemName}`);
+  newElement.classList.add(`${className}`);
+  newElement.innerText = `${content}`;
+  return newElement;
+};
 
-  let commentImg = document.createElement('div');
-  commentImg.classList.add('comment__img');
+function displayExistingComments(array) {
+  array.forEach((element) => {
+    let comment = createElement('div', 'comment');
+    commentsContainer.append(comment);
 
-  let commentContent = document.createElement('div');
-  commentContent.classList.add('comment__content');
+    let commentImg = createElement('div', 'comment__img');
+    comment.append(commentImg);
 
-  comment.append(commentImg, commentContent);
+    let commentContent = createElement('div', 'comment__content');
+    comment.append(commentContent);
 
-  let commentHead = document.createElement('div');
-  commentHead.classList.add('comment__content-head');
+    let commentHead = createElement('div', 'comment__content-head');
+    commentContent.append(commentHead);
 
-  commentContent.append(commentHead);
+    let commentUsername = createElement(
+      'p',
+      'comment__content-head--username',
+      `${element.name}`
+    );
+    commentHead.append(commentUsername);
 
-  let commentHeadUsername = document.createElement('div');
-  let commentHeadDate = document.createElement('div');
+    let commentDate = createElement(
+      'p',
+      'comment__content-head--date',
+      `${element.date}`
+    );
+    commentHead.append(commentDate);
 
-  commentHead.append(commentHeadUsername, commentHeadDate);
+    let commentText = createElement(
+      'p',
+      'comment__content-text',
+      `${element.comment}`
+    );
+    commentContent.append(commentText);
+
+    commentsContainer.append(comment);
+  });
+}
+
+let commentForm = document.querySelector('.comments__form');
+
+console.log(commentForm.name);
+commentForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  let commentName = commentForm.name.value;
+  let commentDate = dayjs();
+  let commentDateFormated = commentDate.format('DD-MM-YYYY');
+  let commentName = commentForm.name.value;
+  console.log(commentName);
 });
+
+displayExistingComments(comments);

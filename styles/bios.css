@@ -665,6 +665,10 @@ address {
 .comments__form-inputs .submit-comment:hover {
   background-color: #000000;
 }
+.comments .comments__container {
+  margin-bottom: 1rem;
+}
+
 .comment {
   display: flex;
   flex-direction: row;
