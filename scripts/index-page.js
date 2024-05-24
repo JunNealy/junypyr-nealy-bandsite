@@ -69,14 +69,30 @@ function displayExistingComments(array) {
 
 let commentForm = document.querySelector('.comments__form');
 
-console.log(commentForm.name);
+const createNewComment = (name, date, comment){
+  return{
+    name: name,
+    date: date,
+    comment: comment
+  }
+}
+
 commentForm.addEventListener('submit', (e) => {
   e.preventDefault();
   let commentName = commentForm.name.value;
-  let commentDate = dayjs();
-  let commentDateFormated = commentDate.format('DD-MM-YYYY');
-  let commentName = commentForm.name.value;
-  console.log(commentName);
+  let currentDate = new Date();
+  let dateDay = currentDate.getDate();
+  let dateMonth = currentDate.getMonth() + 1;
+  let dateYear = currentDate.getFullYear();
+  let commentDate = `${dateDay}/${dateMonth}/${dateYear}`;
+  let commentText = commentForm.comment.value;
+
+  let newComment = createNewComment(commentName, commentDate, commentText)
+
+  comments.unshift(newComment);
+
+  commentsContainer.innerText = '';
+  displayExistingComments(comments);
 });
 
 displayExistingComments(comments);
