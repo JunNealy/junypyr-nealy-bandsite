@@ -11,7 +11,7 @@
   padding: 0;
 }
 
-::placeholder {
+input::placeholder {
   font-family: Avenir;
   color: $bandsite-black;
 }
@@ -43,11 +43,15 @@ button {
 
 a {
   text-decoration: none;
-  color: inherit;
+  color: #e1e1e1;
 }
 
 address {
   font-style: normal;
+}
+
+textarea {
+  font-family: inherit;
 }
 
 /* ------------------------------- */
@@ -79,18 +83,20 @@ address {
 .nav {
   width: 100%;
   &__list {
-    @include flex(row, center, space-between);
+    @include flex(row, center, center);
     list-style: none;
 
     @include tablet {
       @include flex(row, flex-start, center);
     }
-
+    &-link a {
+      color: $mercury;
+    }
     &-link {
       width: 100%;
       text-align: center;
       line-height: 2rem;
-      color: $silver;
+      color: $mercury;
 
       @include tablet {
         line-height: 4rem;

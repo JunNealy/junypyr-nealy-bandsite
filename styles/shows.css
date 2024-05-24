@@ -399,9 +399,9 @@ body {
 }
 @media screen and (min-width: 1280px) {
   .hero__title {
-    max-width: 100%;
-    font-size: 2rem;
-    line-height: 2.5rem;
+    max-width: 65%;
+    font-size: 4rem;
+    line-height: 4.25rem;
     padding: 0;
   }
 }
@@ -419,8 +419,8 @@ body {
 @media screen and (min-width: 1280px) {
   .hero__song {
     justify-self: flex-end;
-    height: 7rem;
-    width: 20rem;
+    height: 8rem;
+    width: 30rem;
   }
 }
 
