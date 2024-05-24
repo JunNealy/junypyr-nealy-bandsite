@@ -37,7 +37,6 @@
 }
 
 @mixin input-box {
-  color: $bandsite-black;
   background-color: $alabaster;
   border: 1px solid $mercury;
   border-radius: 4px;
@@ -56,6 +55,7 @@
   color: $white;
   background-color: $bandsite-black;
   height: 2.5rem;
+  border-radius: 0.25rem;
 }
 
 @mixin button-mobile {

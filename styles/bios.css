@@ -506,17 +506,17 @@ address {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  margin: 0 1rem;
+  padding: 0 1rem;
   background-color: #fafafa;
 }
 @media screen and (min-width: 768px) {
   .gallery {
-    margin: 0 2.25rem;
+    padding: 0 2.25rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .gallery {
-    margin: 0 5.4375rem;
+    padding: 0 5.4375rem;
   }
 }
 .gallery__title {
@@ -570,8 +570,29 @@ address {
 .comments {
   margin: 0 1rem;
 }
+@media screen and (min-width: 768px) {
+  .comments {
+    margin: 0 2.25rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .comments {
+    margin: 0 5.4375rem;
+  }
+}
 .comments__title {
   margin: 1.5rem 0 0 0;
+}
+@media screen and (min-width: 768px) {
+  .comments__title {
+    margin: 2.25rem 0 1rem 0;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .comments__title {
+    font-size: 2rem;
+    font-weight: bold;
+  }
 }
 .comments__form {
   max-width: 100%;
@@ -583,10 +604,20 @@ address {
   margin: 1rem 0.5rem 0.5rem 0.5rem;
   border-bottom: 1px solid #e1e1e1;
 }
+@media screen and (min-width: 768px) {
+  .comments__form {
+    margin: 2rem 2.25rem 2rem 2.25rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .comments__form {
+    margin: 2rem 15rem 2rem 15rem;
+  }
+}
 .comments__form-user-image {
   margin-top: 1rem;
-  width: 2.25rem;
-  height: 2.25rem;
+  width: 3rem;
+  height: 3rem;
   border-radius: 50%;
   background-image: url("../assets/images/Mohan-muruge.jpg");
   background-position: center;
@@ -603,6 +634,11 @@ address {
   width: 80%;
   margin-bottom: 1rem;
 }
+@media screen and (min-width: 768px) {
+  .comments__form-inputs {
+    width: 90%;
+  }
+}
 .comments__form-inputs-label {
   font-size: 0.75rem;
   font-weight: 700;
@@ -610,7 +646,6 @@ address {
   margin-bottom: 0.25rem;
 }
 .comments__form-inputs-name {
-  color: #323232;
   background-color: #fafafa;
   border: 1px solid #e1e1e1;
   border-radius: 4px;
@@ -621,8 +656,12 @@ address {
   border-radius: 4px;
   padding: 0.75rem;
 }
+@media screen and (min-width: 768px) {
+  .comments__form-inputs-name {
+    height: 3rem;
+  }
+}
 .comments__form-inputs-name:focus {
-  color: #323232;
   background-color: #fafafa;
   border: 1px solid #e1e1e1;
   border-radius: 4px;
@@ -633,17 +672,16 @@ address {
   border-color: #323232;
 }
 .comments__form-inputs-comment {
-  color: #323232;
   background-color: #fafafa;
   border: 1px solid #e1e1e1;
   border-radius: 4px;
   padding: 0.75rem;
   margin-bottom: 1rem;
   width: 100%;
+  height: 6.5rem;
   margin-bottom: 1rem;
 }
 .comments__form-inputs-comment:focus {
-  color: #323232;
   background-color: #fafafa;
   border: 1px solid #e1e1e1;
   border-radius: 4px;
@@ -657,16 +695,37 @@ address {
   color: #ffffff;
   background-color: #323232;
   height: 2.5rem;
+  border-radius: 0.25rem;
   font-size: 0.75rem;
   font-weight: 700;
   width: 100%;
   align-self: flex-end;
+}
+@media screen and (min-width: 768px) {
+  .comments__form-inputs .submit-comment {
+    color: #ffffff;
+    background-color: #323232;
+    height: 2.5rem;
+    border-radius: 0.25rem;
+    width: 9.375rem;
+    padding: 0 2rem;
+  }
 }
 .comments__form-inputs .submit-comment:hover {
   background-color: #000000;
 }
 .comments .comments__container {
   margin-bottom: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .comments .comments__container {
+    margin: 0 2rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .comments .comments__container {
+    margin: 2rem 15rem 2rem 15rem;
+  }
 }
 
 .comment {
@@ -683,7 +742,7 @@ address {
   background-color: #e1e1e1;
 }
 .comment__content {
-  width: 75%;
+  width: 88%;
   margin-bottom: 0.5rem;
 }
 .comment__content-head {
@@ -693,20 +752,50 @@ address {
   align-items: flex-start;
   margin-bottom: 0.5rem;
 }
+@media screen and (min-width: 768px) {
+  .comment__content-head {
+    margin-bottom: 0.25rem;
+  }
+}
 .comment__content-head--username {
   font-size: 0.9rem;
   line-height: 1.125rem;
   font-weight: 400;
   font-weight: bold;
 }
+@media screen and (min-width: 768px) {
+  .comment__content-head--username {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 400;
+    font-weight: bold;
+  }
+}
 .comment__content-head--date {
   font-size: 0.9rem;
   line-height: 1.125rem;
   font-weight: 400;
-  color: grey;
+  color: #e1e1e1;
+}
+@media screen and (min-width: 768px) {
+  .comment__content-head--date {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 400;
+    font-weight: bold;
+  }
 }
 .comment__content-text {
   font-size: 0.9rem;
   line-height: 1.125rem;
   font-weight: 400;
+}
+@media screen and (min-width: 768px) {
+  .comment__content-text {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 400;
+    font-weight: bold;
+    margin: 0.5rem 0 1rem 0;
+  }
 }/*# sourceMappingURL=bios.css.map */

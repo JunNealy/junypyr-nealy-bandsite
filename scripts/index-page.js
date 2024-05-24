@@ -95,6 +95,7 @@ commentForm.addEventListener('submit', (e) => {
   let newComment = createNewComment(commentName, commentDate, commentText);
   comments.unshift(newComment);
   commentsContainer.innerText = '';
+  commentForm.reset();
   displayExistingComments(comments);
 });
 
