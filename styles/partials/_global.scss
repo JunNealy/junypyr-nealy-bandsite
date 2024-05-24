@@ -11,6 +11,11 @@
   padding: 0;
 }
 
+::placeholder {
+  font-family: Avenir;
+  color: $bandsite-black;
+}
+
 body {
   width: 100vw;
   height: 100vh;

@@ -1,4 +1,5 @@
 @use './variables' as *;
+@use './typography-mixins' as *;
 
 @mixin tablet {
   @media screen and (min-width: $tablet-breakpoint) {
@@ -36,7 +37,35 @@
 }
 
 @mixin input-box {
+  color: $bandsite-black;
+  background-color: $alabaster;
   border: 1px solid $mercury;
   border-radius: 4px;
   padding: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+@mixin input-box-active {
+  @include input-box;
+  outline: none;
+  box-shadow: none;
+  border-color: $bandsite-black;
+}
+
+@mixin button {
+  color: $white;
+  background-color: $bandsite-black;
+  height: 2.5rem;
+}
+
+@mixin button-mobile {
+  @include button;
+  @include mobi-labels-buttons;
+  width: 100%;
+}
+
+@mixin button-desk-tab {
+  @include button;
+  width: 9.375rem;
+  padding: 0 2rem;
 }

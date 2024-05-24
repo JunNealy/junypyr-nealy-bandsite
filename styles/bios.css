@@ -15,6 +15,16 @@
   padding: 0;
 }
 
+::-moz-placeholder {
+  font-family: Avenir;
+  color: #323232;
+}
+
+::placeholder {
+  font-family: Avenir;
+  color: #323232;
+}
+
 body {
   width: 100vw;
   height: 100vh;
@@ -560,6 +570,9 @@ address {
 .comments {
   margin: 0 1rem;
 }
+.comments__title {
+  margin: 1.5rem 0 0 0;
+}
 .comments__form {
   max-width: 100%;
   display: flex;
@@ -567,10 +580,11 @@ address {
   justify-content: center;
   align-items: flex-start;
   justify-content: space-between;
-  margin: 0.5rem;
-  border-bottom: 3px solid grey;
+  margin: 1rem 0.5rem 0.5rem 0.5rem;
+  border-bottom: 1px solid #e1e1e1;
 }
 .comments__form-user-image {
+  margin-top: 1rem;
   width: 2.25rem;
   height: 2.25rem;
   border-radius: 50%;
@@ -589,25 +603,67 @@ address {
   width: 80%;
   margin-bottom: 1rem;
 }
+.comments__form-inputs-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #afafaf;
+  margin-bottom: 0.25rem;
+}
 .comments__form-inputs-name {
+  color: #323232;
+  background-color: #fafafa;
+  border: 1px solid #e1e1e1;
+  border-radius: 4px;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  height: 2.25rem;
   border: 1px solid #e1e1e1;
   border-radius: 4px;
   padding: 0.75rem;
 }
-.comments__form-inputs-label {
-  margin-bottom: 0.25rem;
-}
-.comments__form-inputs-name {
-  height: 2.25rem;
-  width: 100%;
+.comments__form-inputs-name:focus {
+  color: #323232;
+  background-color: #fafafa;
+  border: 1px solid #e1e1e1;
+  border-radius: 4px;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  outline: none;
+  box-shadow: none;
+  border-color: #323232;
 }
 .comments__form-inputs-comment {
+  color: #323232;
+  background-color: #fafafa;
+  border: 1px solid #e1e1e1;
+  border-radius: 4px;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
   width: 100%;
-  padding: 0;
-  margin: 0 0 1rem 0;
+  margin-bottom: 1rem;
+}
+.comments__form-inputs-comment:focus {
+  color: #323232;
+  background-color: #fafafa;
+  border: 1px solid #e1e1e1;
+  border-radius: 4px;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  outline: none;
+  box-shadow: none;
+  border-color: #323232;
 }
 .comments__form-inputs .submit-comment {
+  color: #ffffff;
+  background-color: #323232;
+  height: 2.5rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  width: 100%;
   align-self: flex-end;
+}
+.comments__form-inputs .submit-comment:hover {
+  background-color: #000000;
 }
 
 .comment {
