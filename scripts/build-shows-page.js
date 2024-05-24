@@ -54,19 +54,6 @@ function createSectionTitle() {
   showsContainer.prepend(sectionTitle);
 }
 
-// function createTabDeskTitles() {
-//   let deskTabContainer = document.createElement('div');
-//   addClass('desk-tab-title-list', deskTabContainer);
-//   let deskTabDate = createParagraphElement('DATE');
-//   let deskTabVenue = createParagraphElement('VENUE');
-//   let deskTabLocation = createParagraphElement('LOCATION');
-//   addClass('desk-tab-title-list__date', deskTabDate);
-//   addClass('desk-tab-title-list__venue', deskTabVenue);
-//   addClass('desk-tab-title-list__location', deskTabLocation);
-//   deskTabContainer.append(deskTabDate, deskTabVenue, deskTabLocation);
-//   shows.appendChild(deskTabContainer);
-// }
-
 function createParagraphElement(innerText) {
   paragraphElement = document.createElement('p');
   paragraphElement.innerText = innerText;
@@ -85,6 +72,16 @@ function createShows(array) {
     addClass('show-list__item', showDiv);
 
     if (i === 0) {
+      let titleDiv = document.createElement('div');
+      addClass('shows-list__title-div', titleDiv);
+      showsList.append(titleDiv);
+      let dateTitleDiv = createParagraphElement('DATE');
+      addClass('shows-list__title-div--date', dateTitleDiv);
+      let venueTitleDiv = createParagraphElement('VENUE');
+      addClass('shows-list__title-div--venue', venueTitleDiv);
+      let locationTitleDiv = createParagraphElement('LOCATION');
+      addClass('shows-list__title-div--location', locationTitleDiv);
+      titleDiv.append(dateTitleDiv, venueTitleDiv, locationTitleDiv);
     }
 
     let dateTitle = createParagraphElement('DATE');
@@ -121,12 +118,8 @@ function createShows(array) {
   }
 }
 
-// let firstShow = document.querySelector('.show-list__item');
-// let firstShowChilder = first.querySelectorAll('.show-list__item-info');
-
 function buildShowPage() {
   createSectionTitle();
-  // createTabDeskTitles();
   createShows(showList);
 }
 

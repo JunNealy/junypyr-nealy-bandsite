@@ -100,7 +100,7 @@ address {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
+  align-items: space-between;
   list-style: none;
 }
 @media screen and (min-width: 768px) {

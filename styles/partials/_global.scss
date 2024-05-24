@@ -79,7 +79,7 @@ address {
 .nav {
   width: 100%;
   &__list {
-    @include flex(row, center, center);
+    @include flex(row, center, space-between);
     list-style: none;
 
     @include tablet {

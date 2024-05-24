@@ -115,11 +115,11 @@ body {
     align-self: flex-start;
 
     @include tablet {
-      align-self: flex-start;
-      margin: $tab-container;
+      margin: 0 2rem 1rem 2rem;
     }
 
     @include desktop {
+      margin: 0;
       align-self: flex-start;
     }
   }
@@ -152,7 +152,7 @@ body {
     }
     &-info-title {
       @include show-info-title;
-      margin: $mobile-container;
+      margin: 0.75rem 1rem 0.5rem 1rem;
 
       @include tablet {
         display: none;
@@ -169,10 +169,9 @@ body {
       }
     }
     &-button {
-      @include mobi-labels-bottons;
-      @include mobi-cta-button;
       align-self: center;
-      width: 17.875rem;
+      @include button-mobile;
+      width: 90%;
       margin-bottom: 1rem;
 
       @include tablet {
@@ -186,69 +185,28 @@ body {
   }
 }
 
-// .desk-tab-title-list {
-//   display: none;
+.shows-list__title-div {
+  display: none;
+  font-size: 0.75rem;
+  padding-top: 1rem;
+  color: $silver;
 
-//   @include tablet {
-//     margin: $tab-container;
-//     display: block;
-//     @include flex(row, flex-start, center);
-//   }
+  @include tablet {
+    display: block;
+    @include flex(row);
+  }
 
-//   &__date {
-//     @include tablet {
-//       margin-right: 19.5vw;
-//     }
-//   }
-//   &__venue {
-//     @include tablet {
-//       margin-right: 6.65rem;
-//     }
-//   }
-// }
+  &--date {
+    margin-right: 10.5rem;
+    @include desktop {
+      margin-right: 12.5rem;
+    }
+  }
+  &--venue {
+    margin-right: 7.5rem;
 
-// show
-// show__subtitle
-
-//  addClass('show__info', showDate, showVenue, showLocation);
-//     addClass('show__button',
-
-// position: relative;
-// @include flex(column, flex-start, center);
-// background-image: url('../assets/images/hero-shows.jpg');
-// background-color: $bandsite-black;
-// background-position: center;
-// background-size: cover;
-
-// @include tablet {
-//   height: 28rem;
-// }
-
-// @include desktop {
-//   height: 32rem;
-// }
-
-// &__overlay {
-//   width: 100%;
-//   height: 100%;
-//   background-color: $bandsite-black;
-//   opacity: 50%;
-// }
-
-// &__title {
-//   @include mobi-page-header;
-//   top: 50%;
-//   left: 1rem;
-//   position: absolute;
-//   color: $white;
-//   transform: translateY(-50%);
-
-//   @include tablet {
-//     @include desk-tab-page-header;
-//     left: 2.25rem;
-//   }
-
-//   @include desktop {
-//     left: 5.4375rem;
-//   }
-// }
+    @include desktop {
+      margin-right: 10rem;
+    }
+  }
+}
