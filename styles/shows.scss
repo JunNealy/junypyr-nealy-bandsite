@@ -1,7 +1,6 @@
 @use './partials/global' as *;
 @use '../styles/partials/variables' as *;
 @use '../styles/partials/mixins' as *;
-@use '../styles/partials/typography-mixins' as *;
 
 body {
   box-sizing: border-box;
@@ -173,6 +172,7 @@ body {
       @include button-mobile;
       width: 90%;
       margin-bottom: 1rem;
+      cursor: pointer;
 
       @include tablet {
         width: 9.375rem;
@@ -180,6 +180,11 @@ body {
     }
 
     &-button:hover {
+      background-color: $bandsite-dark-black;
+      cursor: pointer;
+    }
+
+    &-button:focus {
       background-color: $bandsite-dark-black;
     }
   }

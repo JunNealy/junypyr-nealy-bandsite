@@ -1,5 +1,4 @@
 @use './variables' as *;
-@use './typography-mixins' as *;
 
 @mixin tablet {
   @media screen and (min-width: $tablet-breakpoint) {
@@ -70,8 +69,6 @@
   padding: 0 2rem;
 }
 
-@use './variables' as *;
-
 :root {
   @font-face {
     font-family: 'Avenir';
@@ -81,10 +78,6 @@
       url('../../assets/fonts/AvenirNextLTPro-Bold.otf') format('opentype');
   }
   font-family: Avenir;
-}
-
-textarea {
-  font-family: inherit;
 }
 
 @mixin desk-tab-page-header {
