@@ -15,12 +15,12 @@
   padding: 0;
 }
 
-::-moz-placeholder {
+input::-moz-placeholder {
   font-family: Avenir;
   color: #323232;
 }
 
-::placeholder {
+input::placeholder {
   font-family: Avenir;
   color: #323232;
 }
@@ -52,11 +52,15 @@ button {
 
 a {
   text-decoration: none;
-  color: inherit;
+  color: #e1e1e1;
 }
 
 address {
   font-style: normal;
+}
+
+textarea {
+  font-family: inherit;
 }
 
 /* ------------------------------- */
@@ -100,7 +104,7 @@ address {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: space-between;
+  align-items: center;
   list-style: none;
 }
 @media screen and (min-width: 768px) {
@@ -111,11 +115,14 @@ address {
     align-items: center;
   }
 }
+.nav__list-link a, .nav__list-link:hover a, .nav__list-link--active:hover a, .nav__list-link--active a {
+  color: #e1e1e1;
+}
 .nav__list-link, .nav__list-link:hover, .nav__list-link--active:hover, .nav__list-link--active {
   width: 100%;
   text-align: center;
   line-height: 2rem;
-  color: #afafaf;
+  color: #e1e1e1;
 }
 @media screen and (min-width: 768px) {
   .nav__list-link, .nav__list-link:hover, .nav__list-link--active:hover, .nav__list-link--active {
@@ -618,13 +625,19 @@ address {
 }
 .comments__form-user-image {
   margin-top: 1rem;
-  width: 3rem;
-  height: 3rem;
+  width: 2.25rem;
+  height: 2.25rem;
   border-radius: 50%;
   background-image: url("../assets/images/Mohan-muruge.jpg");
   background-position: center;
   background-size: cover;
   background-color: #e1e1e1;
+}
+@media screen and (min-width: 768px) {
+  .comments__form-user-image {
+    width: 3rem;
+    height: 3rem;
+  }
 }
 .comments__form-inputs {
   display: flex;
@@ -738,14 +751,25 @@ address {
   border-bottom: 1px solid #e1e1e1;
 }
 .comment__img {
-  width: 50px;
-  height: 50px;
+  width: 36px;
+  height: 36px;
   border-radius: 500px;
   background-color: #e1e1e1;
 }
+@media screen and (min-width: 768px) {
+  .comment__img {
+    width: 48px;
+    height: 48px;
+  }
+}
 .comment__content {
-  width: 88%;
+  width: 80%;
   margin-bottom: 0.5rem;
+}
+@media screen and (min-width: 768px) {
+  .comment__content {
+    width: 90%;
+  }
 }
 .comment__content-head {
   display: flex;
@@ -777,7 +801,7 @@ address {
   font-size: 0.9rem;
   line-height: 1.125rem;
   font-weight: 400;
-  color: #e1e1e1;
+  color: #afafaf;
 }
 @media screen and (min-width: 768px) {
   .comment__content-head--date {

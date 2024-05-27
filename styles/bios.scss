@@ -1,7 +1,6 @@
 @use './partials/global' as *;
 @use '../styles/partials/variables' as *;
 @use '../styles/partials/mixins' as *;
-@use '../styles/partials/typography-mixins' as *;
 
 .hero {
   position: relative;
@@ -245,8 +244,8 @@
     }
     &-user-image {
       margin-top: 1rem;
-      width: 3rem;
-      height: 3rem;
+      width: 2.25rem;
+      height: 2.25rem;
       border-radius: 50%;
       background-image: url('../assets/images/Mohan-muruge.jpg');
       background-position: center;
@@ -254,6 +253,8 @@
       background-color: $mercury;
 
       @include tablet {
+        width: 3rem;
+        height: 3rem;
       }
     }
 
@@ -336,16 +337,23 @@
   border-bottom: $divider;
 
   &__img {
-    width: 50px;
-    height: 50px;
+    width: 36px;
+    height: 36px;
     border-radius: 500px;
     background-color: $mercury;
+
+    @include tablet {
+      width: 48px;
+      height: 48px;
+    }
   }
 
   &__content {
-    width: 88%;
+    width: 80%;
     margin-bottom: 0.5rem;
-
+    @include tablet {
+      width: 90%;
+    }
     &-head {
       @include flex(row, space-between, flex-start);
       margin-bottom: 0.5rem;
@@ -366,7 +374,7 @@
 
       &--date {
         @include mobi-body-copy;
-        color: $mercury;
+        color: $silver;
 
         @include tablet {
           @include desk-tab-body-copy;
