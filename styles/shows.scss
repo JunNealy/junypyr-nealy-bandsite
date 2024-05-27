@@ -141,6 +141,12 @@ body {
     border-bottom: 2px solid $mercury;
     margin-bottom: 1rem;
 
+    &:hover {
+      background-color: $alabaster;
+    }
+    &:focus-within {
+      background-color: $mercury;
+    }
     @include tablet {
       @include flex(row, space-between, center);
       margin-bottom: 1rem;
@@ -169,6 +175,7 @@ body {
     }
     &-button {
       align-self: center;
+      justify-self: center;
       @include button-mobile;
       width: 90%;
       margin-bottom: 1rem;
@@ -176,6 +183,7 @@ body {
 
       @include tablet {
         width: 9.375rem;
+        margin: 1rem 0;
       }
     }
 

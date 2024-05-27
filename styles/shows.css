@@ -490,6 +490,12 @@ body {
   border-bottom: 2px solid #e1e1e1;
   margin-bottom: 1rem;
 }
+.show-list__item:hover {
+  background-color: #fafafa;
+}
+.show-list__item:focus-within {
+  background-color: #e1e1e1;
+}
 @media screen and (min-width: 768px) {
   .show-list__item {
     display: flex;
@@ -533,6 +539,7 @@ body {
 }
 .show-list__item-button {
   align-self: center;
+  justify-self: center;
   color: #ffffff;
   background-color: #323232;
   height: 2.5rem;
@@ -547,6 +554,7 @@ body {
 @media screen and (min-width: 768px) {
   .show-list__item-button {
     width: 9.375rem;
+    margin: 1rem 0;
   }
 }
 .show-list__item-button:hover {
