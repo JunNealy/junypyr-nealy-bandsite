@@ -39,7 +39,7 @@ let showsList = document.querySelector('.show-list');
 function createBuyButton() {
   let buyButton = document.createElement('button');
   buyButton.innerText = 'BUY TICKETS';
-  console.log(buyButton);
+
   return buyButton;
 }
 
