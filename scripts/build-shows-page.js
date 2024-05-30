@@ -1,4 +1,5 @@
 import { BandSiteApi, apiKey } from './band-site-api.js';
+import convertDate from './unix-timestamp-convert.js';
 
 let showBandSiteApi = new BandSiteApi(apiKey);
 
@@ -64,7 +65,9 @@ function createShows(array) {
     }
 
     let dateTitle = createParagraphElement('DATE');
-    let showDate = createParagraphElement(`${array[i].date}`);
+    let convertedDate = convertDate(array[i].date);
+    // let showDate = createParagraphElement(`${array[i].date}`);
+    let showDate = createParagraphElement(convertedDate);
 
     let venueTitle = createParagraphElement('VENUE');
     let showVenue = createParagraphElement(`${array[i].place}`);
