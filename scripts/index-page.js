@@ -12,7 +12,6 @@ async function retrieveComments() {
 }
 
 let comments = await retrieveComments();
-console.log(comments);
 
 let commentsContainer = document.querySelector('.comments__container');
 

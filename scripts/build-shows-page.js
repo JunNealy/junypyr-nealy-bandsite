@@ -1,36 +1,19 @@
-let showList = [
-  {
-    date: 'Mon Sept 09 2024',
-    venue: 'Ronald Lane',
-    location: 'San Francisco, CA',
-  },
+import { BandSiteApi, apiKey } from './band-site-api.js';
 
-  {
-    date: 'Tue Sept 17 2024 ',
-    venue: 'Pier 3 East ',
-    location: 'San Francisco, CA ',
-  },
-  {
-    date: 'Sat Oct 12 2024',
-    venue: 'View Lounge',
-    location: 'San Francisco, CA',
-  },
-  {
-    date: 'Sat Nov 16 2024',
-    venue: 'Hyatt Agency',
-    location: 'San Francisco, CA',
-  },
-  {
-    date: 'Fri Nov 29 2024',
-    venue: 'Moscow Center',
-    location: 'San Francisco, CA',
-  },
-  {
-    date: 'Wed Dec 18 2024',
-    venue: 'Press Club',
-    location: 'San Francisco, CA',
-  },
-];
+let showBandSiteApi = new BandSiteApi(apiKey);
+
+async function retrieveShows() {
+  try {
+    let showsArr = await showBandSiteApi.getShows();
+    return showsArr;
+  } catch (e) {
+    console.log(e);
+  }
+}
+
+let showList = await retrieveShows();
+
+console.log(showList);
 
 let showsContainer = document.querySelector('#shows');
 
@@ -51,7 +34,7 @@ function createSectionTitle() {
 }
 
 function createParagraphElement(innerText) {
-  paragraphElement = document.createElement('p');
+  let paragraphElement = document.createElement('p');
   paragraphElement.innerText = innerText;
   return paragraphElement;
 }
@@ -84,7 +67,7 @@ function createShows(array) {
     let showDate = createParagraphElement(`${array[i].date}`);
 
     let venueTitle = createParagraphElement('VENUE');
-    let showVenue = createParagraphElement(`${array[i].venue}`);
+    let showVenue = createParagraphElement(`${array[i].place}`);
 
     let locationTitle = createParagraphElement('LOCATION');
     let showLocation = createParagraphElement(`${array[i].location}`);
