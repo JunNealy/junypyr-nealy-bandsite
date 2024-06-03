@@ -15,36 +15,36 @@ class ConvertTimeCode {
       'Nov',
       'Dec',
     ];
+    this.daysOfWeekAbbrev = ['Mon', 'Tue', 'Wed', 'Thurs', 'Fri', 'Sat', 'Sun'];
   }
 
   twoDigitMonth(date) {
     let month = date.getMonth() + 1;
     month = month.toString();
-    month = month.padStart(2, '0');
+    return (month = month.padStart(2, '0'));
   }
 
   twoDigitDate(convertDate) {
     let date = convertDate.getDate();
-    if (date.length === 1) {
-      date = date.padStart(2, '0');
-      return date;
-    } else {
-      return date;
-    }
+    date = date.toString();
+    return (date = date.padStart(2, '0'));
   }
 
   toDsMsDDYY(timeStamp) {
-    let fullDate = new Date(timeStamp);
-    let monthString = this.twoDigitMonth(fullDate);
+    let fullDate = new Date(this.timeStamp);
+    console.log(fullDate);
+    let month = fullDate.getMonth() + 1;
+    let monthString = this.monthsAbbrev[month];
     let dayOfWeek = fullDate.getDay();
+    let dayOfWeekString = this.daysOfWeekAbbrev[dayOfWeek];
     let date = this.twoDigitDate(fullDate);
     let year = fullDate.getFullYear();
 
-    return `${dayOfWeek} ${monthString} ${date} ${year}`;
+    return `${dayOfWeekString} ${monthString} ${date} ${year}`;
   }
 }
 
-const concertDate = new ConvertTimeCode('1717456804');
+const concertDate = new ConvertTimeCode('1725854400000');
 
 console.log(concertDate.toDsMsDDYY());
 

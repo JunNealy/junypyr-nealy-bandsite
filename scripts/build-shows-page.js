@@ -63,9 +63,9 @@ function createShows(array) {
       addClass('shows-list__title-div--location', locationTitleDiv);
       titleDiv.append(dateTitleDiv, venueTitleDiv, locationTitleDiv);
     }
-
+    const dateConverter = new convertDate(array[i].date);
     let dateTitle = createParagraphElement('DATE');
-    let convertedDate = convertDate(array[i].date);
+    let convertedDate = dateConverter.toDsMsDDYY();
     // let showDate = createParagraphElement(`${array[i].date}`);
     let showDate = createParagraphElement(convertedDate);
 
