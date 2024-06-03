@@ -25,7 +25,7 @@ const createElement = (elemName, className, content = '') => {
 function displayExistingComments(array) {
   array.forEach((element) => {
     let comment = createElement('div', 'comment');
-    commentsContainer.append(comment);
+    commentsContainer.prepend(comment);
 
     let commentImg = createElement('div', 'comment__img');
     comment.append(commentImg);
@@ -56,8 +56,6 @@ function displayExistingComments(array) {
       `${element.comment}`
     );
     commentContent.append(commentText);
-
-    commentsContainer.append(comment);
   });
 }
 
@@ -71,7 +69,7 @@ const createNewComment = (name, date, comment) => {
   };
 };
 
-const getCommentDate = () => {
+const getCommentDate = async () => {
   let currentDate = new Date();
   let dateDay = currentDate.getDate();
   let dateMonth = currentDate.getMonth() + 1;
@@ -79,17 +77,18 @@ const getCommentDate = () => {
   return `${dateDay}/${dateMonth}/${dateYear}`;
 };
 
-commentForm.addEventListener('submit', (e) => {
+commentForm.addEventListener('submit', async (e) => {
   e.preventDefault();
 
   let commentName = commentForm.name.value;
-  let commentDate = getCommentDate();
+  let commentDate = await getCommentDate();
   let commentText = commentForm.comment.value;
 
   let newComment = createNewComment(commentName, commentDate, commentText);
-  comments.unshift(newComment);
-  commentsContainer.innerText = '';
-  commentForm.reset();
+
+  await bandSiteApi.postComment(newComment);
+  let comments = await retrieveComments();
+
   displayExistingComments(comments);
 });
 

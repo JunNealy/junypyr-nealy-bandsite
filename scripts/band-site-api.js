@@ -17,7 +17,15 @@ export class BandSiteApi {
 
   async getShows() {
     let shows = await axios.get(`${this.baseUrl}/showdates/${this.apiKey}`);
-
     return shows.data;
+  }
+
+  async postComment(obj) {
+    let post = { name: obj.name, comment: obj.comment };
+    try {
+      await axios.post(`${this.baseUrl}/comments/${this.apiKey}`, post);
+    } catch (error) {
+      console.log(error);
+    }
   }
 }
