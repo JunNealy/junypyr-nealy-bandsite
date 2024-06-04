@@ -18,8 +18,6 @@ async function retrieveShows() {
 
 let showList = await retrieveShows();
 
-console.log(showList);
-
 function createBuyButton() {
   let buyButton = document.createElement('button');
   buyButton.innerText = 'BUY TICKETS';
@@ -66,7 +64,7 @@ function createShows(array) {
     const dateConverter = new convertDate(array[i].date);
     let dateTitle = createParagraphElement('DATE');
     let convertedDate = dateConverter.toDsMsDDYY(`${array[i].date}`);
-    // let showDate = createParagraphElement(`${array[i].date}`);
+
     let showDate = createParagraphElement(convertedDate);
 
     let venueTitle = createParagraphElement('VENUE');

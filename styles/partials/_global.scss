@@ -1,5 +1,6 @@
 @use './variables' as *;
 @use './mixins' as *;
+@use './typography' as *;
 
 /* ------------------------------- */
 /* Resets */
@@ -107,11 +108,18 @@ textarea {
         @extend .nav__list-link;
         color: $white;
         border-bottom: 4px solid $white;
+
+        & a {
+          color: $white;
+        }
       }
       &:hover {
         @extend .nav__list-link;
         color: $white;
         border-bottom: 4px solid $white;
+        & a {
+          color: $white;
+        }
       }
     }
   }

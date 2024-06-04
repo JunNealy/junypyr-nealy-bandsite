@@ -1,5 +1,5 @@
 :root {
-  font-family: Avenir;
+  font-family: Avenir, Arial, Helvetica, sans-serif;
 }
 @font-face {
   font-family: "Avenir";
@@ -136,9 +136,15 @@ textarea {
   color: #ffffff;
   border-bottom: 4px solid #ffffff;
 }
+.nav__list-link--active a {
+  color: #ffffff;
+}
 .nav__list-link:hover, .nav__list-link--active:hover {
   color: #ffffff;
   border-bottom: 4px solid #ffffff;
+}
+.nav__list-link:hover a, .nav__list-link--active:hover a {
+  color: #ffffff;
 }
 
 /* ------------------------------- */

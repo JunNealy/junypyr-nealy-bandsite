@@ -10,7 +10,7 @@ const bandSiteApi = new BandSiteApi(apiKey);
 async function retrieveComments() {
   try {
     let comments = await bandSiteApi.getComments();
-    console.log(comments);
+
     return comments;
   } catch (error) {
     console.log(error);

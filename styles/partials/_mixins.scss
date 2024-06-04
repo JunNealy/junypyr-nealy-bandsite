@@ -69,17 +69,6 @@
   padding: 0 2rem;
 }
 
-:root {
-  @font-face {
-    font-family: 'Avenir';
-    src: url('../../assets/fonts/AvenirNextLTPro-Regular.otf')
-        format('opentype'),
-      url('../../assets/fonts/AvenirNextLTPro-Demi.otf') format('opentype'),
-      url('../../assets/fonts/AvenirNextLTPro-Bold.otf') format('opentype');
-  }
-  font-family: Avenir;
-}
-
 @mixin desk-tab-page-header {
   font-size: 3.75rem;
   line-height: 4.25rem;
@@ -154,27 +143,3 @@
 // ------------------------------
 // Typography Padding
 // ------------------------------
-
-@mixin mobi-headline-margin {
-  margin: 1.5rem 0 0 0;
-}
-
-@mixin desk-tab-headline-margin {
-  margin: 2.25rem 0 1rem 0;
-}
-
-@mixin show-info-title {
-  font-size: 0.7rem;
-  line-height: 1.125rem;
-  font-weight: 700;
-  color: $silver;
-  margin: 0.75rem 0rem;
-}
-
-@mixin show-info {
-  font-size: 0.9rem;
-  line-height: 1.125rem;
-  font-weight: 700;
-  color: $bandsite-dark-black;
-  margin-bottom: 1rem;
-}

@@ -1,5 +1,4 @@
-export let apiKey = '?api_key=9e35804f-ecd4-48d7-b718-166ff0eea46f';
-import ConvertTimeCode from './unix-timestamp-convert.js';
+export let apiKey = '?api_key=3d9affad-ecf2-44f5-ac62-ebe45a4b78b2';
 
 export class BandSiteApi {
   constructor(apiKey) {
