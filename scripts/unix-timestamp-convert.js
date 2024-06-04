@@ -42,6 +42,14 @@ class ConvertTimeCode {
 
     return `${dayOfWeekString} ${monthString} ${date} ${year}`;
   }
+
+  toMMDDYYY(timeStamp) {
+    let fullDate = new Date(this.timeStamp);
+    let month = this.twoDigitMonth(fullDate);
+    let day = this.twoDigitDate(fullDate);
+    let year = fullDate.getFullYear();
+    return `${month}/${day}/${year}`;
+  }
 }
 
 const concertDate = new ConvertTimeCode('1725854400000');

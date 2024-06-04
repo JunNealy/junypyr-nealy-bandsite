@@ -1,4 +1,5 @@
 export let apiKey = '?api_key=9e35804f-ecd4-48d7-b718-166ff0eea46f';
+import ConvertTimeCode from './unix-timestamp-convert.js';
 
 export class BandSiteApi {
   constructor(apiKey) {
@@ -8,8 +9,17 @@ export class BandSiteApi {
 
   async getComments() {
     try {
-      let comments = await axios.get(`${this.baseUrl}/comments/${apiKey}`);
-      return comments.data;
+      let commentsRespomse = await axios.get(
+        `${this.baseUrl}/comments/${this.apiKey}`
+      );
+      let comments = commentsRespomse.data;
+      console.log(comments);
+
+      let convertTimeCode = new ConvertTimeCode();
+
+      comments.forEach((comment) => {
+        comment.timestamp = convertTimeCode.toMMDDYYY(comment.timeStamp);
+      });
     } catch (e) {
       console.log(e);
     }
