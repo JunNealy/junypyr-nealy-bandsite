@@ -32,7 +32,6 @@ class ConvertTimeCode {
 
   toDsMsDDYY(timeStamp) {
     let fullDate = new Date(this.timeStamp);
-
     let month = fullDate.getMonth();
     let monthString = this.monthsAbbrev[month];
     let dayOfWeek = fullDate.getDay();

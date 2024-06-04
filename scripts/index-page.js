@@ -81,6 +81,7 @@ commentForm.addEventListener('submit', async (e) => {
 
   await bandSiteApi.postComment(newComment);
   let comments = await retrieveComments();
+  commentsContainer.innerHTML = '';
   commentForm.reset();
   displayExistingComments(comments);
 });
