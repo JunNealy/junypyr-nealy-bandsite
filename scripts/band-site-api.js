@@ -9,17 +9,12 @@ export class BandSiteApi {
 
   async getComments() {
     try {
-      let commentsRespomse = await axios.get(
+      let commentsResponse = await axios.get(
         `${this.baseUrl}/comments/${this.apiKey}`
       );
-      let comments = commentsRespomse.data;
-      console.log(comments);
 
-      let convertTimeCode = new ConvertTimeCode();
-
-      comments.forEach((comment) => {
-        comment.timestamp = convertTimeCode.toMMDDYYY(comment.timeStamp);
-      });
+      let comments = await commentsResponse.data;
+      return comments;
     } catch (e) {
       console.log(e);
     }

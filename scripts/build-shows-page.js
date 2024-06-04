@@ -1,6 +1,10 @@
 import { BandSiteApi, apiKey } from './band-site-api.js';
 import convertDate from './unix-timestamp-convert.js';
 
+let showsContainer = document.querySelector('#shows');
+
+let showsList = document.querySelector('.show-list');
+
 let showBandSiteApi = new BandSiteApi(apiKey);
 
 async function retrieveShows() {
@@ -15,10 +19,6 @@ async function retrieveShows() {
 let showList = await retrieveShows();
 
 console.log(showList);
-
-let showsContainer = document.querySelector('#shows');
-
-let showsList = document.querySelector('.show-list');
 
 function createBuyButton() {
   let buyButton = document.createElement('button');
@@ -65,7 +65,7 @@ function createShows(array) {
     }
     const dateConverter = new convertDate(array[i].date);
     let dateTitle = createParagraphElement('DATE');
-    let convertedDate = dateConverter.toDsMsDDYY();
+    let convertedDate = dateConverter.toDsMsDDYY(`${array[i].date}`);
     // let showDate = createParagraphElement(`${array[i].date}`);
     let showDate = createParagraphElement(convertedDate);
 

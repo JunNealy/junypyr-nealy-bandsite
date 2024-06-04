@@ -33,7 +33,7 @@ class ConvertTimeCode {
   toDsMsDDYY(timeStamp) {
     let fullDate = new Date(this.timeStamp);
     console.log(fullDate);
-    let month = fullDate.getMonth() + 1;
+    let month = fullDate.getMonth();
     let monthString = this.monthsAbbrev[month];
     let dayOfWeek = fullDate.getDay();
     let dayOfWeekString = this.daysOfWeekAbbrev[dayOfWeek];
@@ -44,16 +44,12 @@ class ConvertTimeCode {
   }
 
   toMMDDYYY(timeStamp) {
-    let fullDate = new Date(this.timeStamp);
+    let fullDate = new Date(timeStamp);
     let month = this.twoDigitMonth(fullDate);
     let day = this.twoDigitDate(fullDate);
     let year = fullDate.getFullYear();
     return `${month}/${day}/${year}`;
   }
 }
-
-const concertDate = new ConvertTimeCode('1725854400000');
-
-console.log(concertDate.toDsMsDDYY());
 
 export default ConvertTimeCode;
